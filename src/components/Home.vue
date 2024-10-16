@@ -1221,16 +1221,16 @@ class="relative overflow-hidden">
     <div class="c c-yellow fixed right-8 bottom-8 z-10 w-[450px] h-[450px]"></div>
     <div class="c c-pink fixed left-[8px] lg:left-[450px] top-2 z-10 w-[450px] h-[450px]"></div>
   </div>
-  <!-- <div class="fixed left-[8px] lg:left-[450px] top-2 z-10 w-[600px] h-[600px] rounded-full blur-[200px] top_animate"></div>
-  <div class="fixed right-8 bottom-8 z-10 w-[600px] h-[600px] rounded-full blur-[200px] right_animate"></div>
-  <div class="fixed left-8 bottom-8 z-10 w-[600px] h-[600px] rounded-full blur-[200px] left_animate"></div> -->
   <!-- 1 -->
   <section 
   ref="bg_one"
   class="w-full h-screen flex flex-col justify-center items-center">
     <img 
     ref="logo"
-    src="/logo.png" class="logo z-40">
+    alt="高邦創意"
+    src="/logo.png" 
+    class="logo z-40"
+    loading="lazy">
     <h5 
     ref="logotxt"
     class="fixed flex justify-center items-center mt-[12rem] sm:mt-60 text-[1rem] sm:text-2xl md:text-[1.7rem] md:leading-10 text-white font-GenJyuuGothicBold tracking-[1px] sm:tracking-[1px] z-40" 
@@ -1282,7 +1282,8 @@ class="relative overflow-hidden">
       <img 
       src="/bg_25th-8.png" 
       alt="2024年全台規模最大的動漫盛會" 
-      class="w-full pb-8 px-8 sm:px-0">
+      class="w-full pb-8 px-8 sm:px-0"
+      loading="lazy">
       <h3 
       class="text-custom-blue text-center tracking-[3.8px] text-[24px] sm:text-[28px] md:text-[40px] font-GenJyuuGothicBold">
       2024年全台規模最大的動漫盛會</h3>
@@ -1291,7 +1292,7 @@ class="relative overflow-hidden">
       style="background: linear-gradient(to right, #9A1184 0%, #E33733 35%, #F4BF20 70%);">
       <h5 
       class="text-custom-blue text-center leading-[24px] tracking-[1px] text-[16px] pb-2 font-GenJyuuGothicBold">
-      ONE PIECE 動 25 周年璀璨之夜</h5>
+      ONE PIECE 動畫 25 周年璀璨之夜</h5>
       <p 
       class="text-custom-gray text-center leading-[18px] tracking-[1px] text-[14px] font-GenJyuuGothicRegular">
       63萬人參與，37億觀光產值，次將航海王結合無人
@@ -1320,7 +1321,8 @@ class="relative overflow-hidden">
       <img 
       src="/bg_20th-8.png" 
       alt="台灣首場規模最大的航海王特展" 
-      class="w-full pb-8 px-8 sm:px-0">
+      class="w-full pb-8 px-8 sm:px-0"
+      loading="lazy">
       <h3 
       class="text-custom-blue text-center tracking-[3.8px] text-[24px] sm:text-[28px] md:text-[40px] font-GenJyuuGothicBold">
       台灣首場規模最大的航海王特展</h3>
@@ -1358,7 +1360,8 @@ class="relative overflow-hidden">
       <img 
       src="/bg_run-8.png" 
       alt="台灣首場沉浸式航海王運動會" 
-      class="w-full pb-8 px-8 sm:px-0">
+      class="w-full pb-8 px-8 sm:px-0"
+      loading="lazy">
       <h3 
       class="text-custom-blue text-center tracking-[3.8px] text-[24px] sm:text-[28px] md:text-[40px] font-GenJyuuGothicBold">
       台灣首場沉浸式航海王運動會</h3>
