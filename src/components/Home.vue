@@ -1503,7 +1503,7 @@ class="relative overflow-hidden">
     <div 
     class="flex flex-col justify-center items-center">
       <a 
-      class="text-white text-[10px]" 
+      class="text-white text-[10px] font-GenJyuuGothicRegular" 
       href="mailto:pkbaby0707@gmail.com">{{ Bottomdata.updatedInfo }}</a>
     </div>
   </footer>

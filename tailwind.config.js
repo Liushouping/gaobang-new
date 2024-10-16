@@ -14,10 +14,10 @@ module.exports = {
       letterSpacing: {
       },
       fontFamily: {
-        sans: ['Comfortaa-Light'],
-        ComfortaaBold: ['Comfortaa-Bold'],
+        // sans: ['Comfortaa-Light'],
         GenJyuuGothicBold: ['GenJyuuGothicBold'],
         GenJyuuGothicRegular: ['GenJyuuGothicRegular'],
+        // ComfortaaBold: ['Comfortaa-Bold'],
       }
     },
   },

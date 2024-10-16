@@ -2,20 +2,20 @@
 @tailwind components;
 @tailwind utilities;
 
-@font-face {
+/* @font-face {
   font-family: 'Comfortaa-Light';
   font-style: normal;
   font-weight: 300;
   font-display: swap;
   src: url(/fonts/Comfortaa-Light.ttf) format("opentype");
-}
-@font-face {
+} */
+/* @font-face {
   font-family: 'Comfortaa-Bold';
   font-style: normal;
   font-weight: 700;
   font-display: swap;
   src: url(/fonts/Comfortaa-Bold.ttf) format("opentype");
-}
+} */
 @font-face {
   font-family: 'GenJyuuGothicRegular';
   font-style: normal;
