@@ -158,7 +158,7 @@ export default{
 
     function gsapSet() {
       ScrollTrigger.matchMedia({
-        "(min-width: 368px)": () => {
+        "(min-width: 368px) and (max-width: 479px)": () => {
           //
           gsap.from(logo.value, {
             y: 4000,
@@ -1132,6 +1132,896 @@ export default{
            scale: 1,
           });
           //
+          //
+          gsap.set(topbgtxt.value, {
+            opacity: 0,
+          });
+
+          gsap.to(topbgtxt.value, {
+           scrollTrigger: {
+            trigger: bg_two.value,
+            start: "top +=600px",
+            end: "100",
+            scrub: true,
+            toggleClass: "active",
+            markers: false,
+            toggleClass: {
+              className: 'topbgtxt-to', 
+              targets: topbgtxt.value
+            },
+           },
+           opacity:1,
+          });
+          //
+          gsap.set(bgtxt.value, {
+            opacity:0,
+          });
+
+          gsap.to(bgtxt.value, {
+           scrollTrigger: {
+            trigger: bg_two.value,
+            start: "top +=600px",
+            end: "+=300",
+            scrub: true,
+            toggleClass: "active",
+            markers: false,
+           },
+           opacity:1,
+          });
+          //
+          gsap.set(titleone.value, {
+            y: 300,
+            opacity: 0,
+            scale: 3,
+          });
+
+          gsap.to(titleone.value, {
+           scrollTrigger: {
+            trigger: bg_one.value,
+            start: "top -30",
+            end: "+=300",
+            scrub: true,
+            toggleClass: "active",
+            markers: false,
+           },
+           onEnter() {
+              async function play() {
+                const sleep = (ms) => new Promise((resolve) => setTimeout(resolve, ms));
+
+                // 过渡动画的时间间隔和延迟时间
+                const intervalTime = 1000;
+                const delayTime = 2000;
+
+                // 设置文字的初始状态
+                document.querySelector('.center').classList.remove('hidden');
+                document.querySelector('.blurtext span:nth-child(1)').classList.add('active');
+
+                // 使用防抖函数控制 play 函数的执行次数
+                const debouncedPlay = _.debounce(play, delayTime + 2 * intervalTime);
+
+                // 隐藏第一个单字，并等待 0.5 秒后执行下一步动作
+                document.querySelector('.t').classList.add('hidden');
+                await sleep(3500);
+
+                // 过渡动画
+                const blurtextSpans = document.querySelectorAll('.blurtext span');
+                for (let i = 1; i < blurtextSpans.length; i++) {
+                  // 移除透明滤镜动画
+                  document.querySelectorAll('.blurtext span.past').forEach(el => el.classList.remove('past'));
+                  // 新增 past class, 移除 active class
+                  document.querySelector('.blurtext span.active').classList.add('past');
+                  document.querySelector('.blurtext span.active').classList.remove('active');
+                  // 新增 active class，清除滤镜动画
+                  const nextActiveSpan = document.querySelector('.blurtext span.past + span');
+                  if (nextActiveSpan) {
+                    nextActiveSpan.classList.add('active');
+                  }
+
+                  // 如果所有单字都已经过渡完成，则跳出循环
+                  if (!document.querySelector('.blurtext span.active')) {
+                    break;
+                  }
+
+                  // 等待一段时间后继续下一步动作
+                  await sleep(intervalTime);
+                }
+
+                // 隐藏第一个单字，并等待 2 秒后执行下一步动作
+                document.querySelector('.t').classList.add('hidden');
+                await sleep(delayTime);
+
+                // 使用防抖函数来控制函数的执行次数
+                debouncedPlay();
+              }
+
+              play();
+
+          },
+           y: 200,
+           scale: 1,
+           opacity: 1,
+           duration: 0.6,
+          });
+          //
+          gsap.from(lineone.value, {
+            y: 200,
+            opacity: 0,
+            scale: 0,
+            delay: 1,
+            duration: 0.5,
+          });
+          gsap.to(lineone.value, {
+           scrollTrigger: {
+            start: "top -10",
+            end: "99999",
+            toggleClass: {
+              className: 'line-to', 
+              targets: lineone.value
+            },
+           },
+           scale: 1,
+          });
+          //
+          gsap.set(titletwo.value, {
+            y: 40,
+            filter: "blur(16px)",
+            opacity: 0,
+            scale: 3,
+          });
+
+          gsap.to(titletwo.value, {
+           scrollTrigger: {
+            trigger: bg_two.value,
+            start: "top +=300px",
+            end: "+=300",
+            scrub: true,
+            toggleClass: "active",
+            markers: false,
+           },
+           y: 0,
+           scale: 1,
+           opacity: 1,
+           filter: "blur(0px)",
+           duration: 0.25,
+          });
+          //
+          gsap.set(titlethree.value, {
+            y: 40,
+            filter: "blur(16px)",
+            opacity: 0,
+            scale: 3,
+          });
+
+          gsap.to(titlethree.value, {
+           scrollTrigger: {
+            trigger: bg_end.value,
+            start: "top +=300px",
+            end: "+=300",
+            scrub: true,
+            toggleClass: "active",
+            markers: false,
+           },
+           y: 0,
+           scale: 1,
+           opacity: 1,
+           filter: "blur(0px)",
+           duration: 0.25,
+          });
+          // bg_index_1title
+          gsap.set(bg_index_1title.value, {
+            y: 40,
+            filter: "blur(16px)",
+            opacity: 0,
+            scale: 3,
+          });
+
+          gsap.to(bg_index_1title.value, {
+           scrollTrigger: {
+            trigger: bg_index_1.value,
+            start: "top +=300px",
+            end: "+=300",
+            scrub: true,
+            toggleClass: "active",
+            markers: false,
+           },
+           y: 0,
+           scale: 1,
+           opacity: 1,
+           filter: "blur(0px)",
+           duration: 0.25,
+          });
+          // bg_index_2title
+          gsap.set(bg_index_2title.value, {
+            y: 40,
+            filter: "blur(16px)",
+            opacity: 0,
+            scale: 3,
+          });
+
+          gsap.to(bg_index_2title.value, {
+           scrollTrigger: {
+            trigger: bg_index_2.value,
+            start: "top +=300px",
+            end: "+=300",
+            scrub: true,
+            toggleClass: "active",
+            markers: false,
+           },
+           y: 0,
+           scale: 1,
+           opacity: 1,
+           filter: "blur(0px)",
+           duration: 0.25,
+          });
+          // bg_index_3title
+          gsap.set(bg_index_3title.value, {
+            y: 40,
+            filter: "blur(16px)",
+            opacity: 0,
+            scale: 3,
+          });
+
+          gsap.to(bg_index_3title.value, {
+           scrollTrigger: {
+            trigger: bg_index_3.value,
+            start: "top +=300px",
+            end: "+=300",
+            scrub: true,
+            toggleClass: "active",
+            markers: false,
+           },
+           y: 0,
+           scale: 1,
+           opacity: 1,
+           filter: "blur(0px)",
+           duration: 0.25,
+          });
+          // bg_index_4title
+          gsap.set(bg_index_4title.value, {
+            y: 40,
+            filter: "blur(16px)",
+            opacity: 0,
+            scale: 3,
+          });
+
+          gsap.to(bg_index_4title.value, {
+           scrollTrigger: {
+            trigger: bg_index_4.value,
+            start: "top +=300px",
+            end: "+=300",
+            scrub: true,
+            toggleClass: "active",
+            markers: false,
+           },
+           y: 0,
+           scale: 1,
+           opacity: 1,
+           filter: "blur(0px)",
+           duration: 0.25,
+          });
+          // new left
+          gsap.set(lefta.value, {
+            opacity: 0.1,
+          });
+
+          gsap.to(lefta.value, {
+           scrollTrigger: {
+            trigger: txtone.value,
+            start: "top +=300px",
+            end: "+=300",
+            scrub: true,
+            toggleClass: "active",
+            markers: false,
+           },
+           opacity: 1,
+           duration: 0.6,
+          });
+          //
+          gsap.set(lefto.value, {
+            opacity: 0.1,
+          });
+
+          gsap.to(lefto.value, {
+           scrollTrigger: {
+            trigger: txtone.value,
+            start: "top +=300px",
+            end: "+=300",
+            scrub: true,
+            toggleClass: "active",
+            markers: false,
+           },
+           opacity: 1,
+           duration: 0.6,
+          });
+          //
+          gsap.set(leftb.value, {
+            opacity: 0.1,
+          });
+
+          gsap.to(leftb.value, {
+           scrollTrigger: {
+            trigger: bg_two.value,
+            start: "top +=300px",
+            end: "+=300",
+            scrub: true,
+            toggleClass: "active",
+            markers: false,
+           },
+           opacity: 1,
+           duration: 0.6,
+          });
+          //
+          gsap.set(leftaa.value, {
+            opacity: 0.1,
+          });
+
+          gsap.to(leftaa.value, {
+           scrollTrigger: {
+            trigger: bg_two.value,
+            start: "top +=300px",
+            end: "+=300",
+            scrub: true,
+            toggleClass: "active",
+            markers: false,
+           },
+           opacity: 1,
+           duration: 0.6,
+          });
+          //
+          gsap.set(leftn.value, {
+            opacity: 0.1,
+          });
+
+          gsap.to(leftn.value, {
+           scrollTrigger: {
+            trigger: bg_two.value,
+            start: "top +=300px",
+            end: "+=300",
+            scrub: true,
+            toggleClass: "active",
+            markers: false,
+           },
+           opacity: 1,
+           duration: 0.6,
+          });
+          //
+          gsap.set(leftg.value, {
+            opacity: 0.1,
+          });
+
+          gsap.to(leftg.value, {
+           scrollTrigger: {
+            trigger: bg_two.value,
+            start: "top +=300px",
+            end: "+=300",
+            scrub: true,
+            toggleClass: "active",
+            markers: false,
+           },
+           opacity: 1,
+           duration: 0.6,
+          });
+          //
+          gsap.set(leftc.value, {
+            opacity: 0.1,
+          });
+
+          gsap.to(leftc.value, {
+           scrollTrigger: {
+            trigger: bg_two.value,
+            start: "top +=200px",
+            end: "+=300",
+            scrub: true,
+            toggleClass: "active",
+            markers: false,
+           },
+           opacity: 1,
+           duration: 0.6,
+          });
+          //
+          gsap.set(leftr.value, {
+            opacity: 0.1,
+          });
+
+          gsap.to(leftr.value, {
+           scrollTrigger: {
+            trigger: bg_two.value,
+            start: "top +=200px",
+            end: "+=300",
+            scrub: true,
+            toggleClass: "active",
+            markers: false,
+           },
+           opacity: 1,
+           duration: 0.6,
+          });
+          //
+          gsap.set(lefte.value, {
+            opacity: 0.1,
+          });
+
+          gsap.to(lefte.value, {
+           scrollTrigger: {
+            trigger: bg_two.value,
+            start: "top +=200px",
+            end: "+=300",
+            scrub: true,
+            toggleClass: "active",
+            markers: false,
+           },
+           opacity: 1,
+           duration: 0.6,
+          });
+          //
+          gsap.set(leftaaa.value, {
+            opacity: 0.1,
+          });
+
+          gsap.to(leftaaa.value, {
+           scrollTrigger: {
+            trigger: bg_two.value,
+            start: "top +=200px",
+            end: "+=300",
+            scrub: true,
+            toggleClass: "active",
+            markers: false,
+           },
+           opacity: 1,
+           duration: 0.6,
+          });
+          //
+          gsap.set(leftt.value, {
+            opacity: 0.1,
+          });
+
+          gsap.to(leftt.value, {
+           scrollTrigger: {
+            trigger: bg_two.value,
+            start: "top +=200px",
+            end: "+=300",
+            scrub: true,
+            toggleClass: "active",
+            markers: false,
+           },
+           opacity: 1,
+           duration: 0.6,
+          });
+          //
+          gsap.set(lefti.value, {
+            opacity: 0.1,
+          });
+
+          gsap.to(lefti.value, {
+           scrollTrigger: {
+            trigger: bg_two.value,
+            start: "top +=200px",
+            end: "+=300",
+            scrub: true,
+            toggleClass: "active",
+            markers: false,
+           },
+           opacity: 1,
+           duration: 0.6,
+          });
+          //
+          gsap.set(leftv.value, {
+            opacity: 0.1,
+          });
+
+          gsap.to(leftv.value, {
+           scrollTrigger: {
+            trigger: bg_two.value,
+            start: "top +=200px",
+            end: "+=300",
+            scrub: true,
+            toggleClass: "active",
+            markers: false,
+           },
+           opacity: 1,
+           duration: 0.6,
+          });
+          //
+          gsap.set(leftii.value, {
+            opacity: 0.1,
+          });
+
+          gsap.to(leftii.value, {
+           scrollTrigger: {
+            trigger: bg_two.value,
+            start: "top +=200px",
+            end: "+=300",
+            scrub: true,
+            toggleClass: "active",
+            markers: false,
+           },
+           opacity: 1,
+           duration: 0.6,
+          });
+          //
+          gsap.set(lefttt.value, {
+            opacity: 0.1,
+          });
+
+          gsap.to(lefttt.value, {
+           scrollTrigger: {
+            trigger: bg_two.value,
+            start: "top +=200px",
+            end: "+=300",
+            scrub: true,
+            toggleClass: "active",
+            markers: false,
+           },
+           opacity: 1,
+           duration: 0.6,
+          });
+          //
+          gsap.set(lefty.value, {
+            opacity: 0.1,
+          });
+
+          gsap.to(lefty.value, {
+           scrollTrigger: {
+            trigger: bg_two.value,
+            start: "top +=200px",
+            end: "+=300",
+            scrub: true,
+            toggleClass: "active",
+            markers: false,
+           },
+           opacity: 1,
+           duration: 0.6,
+          });
+          // new right
+          gsap.set(rightg.value, {
+            opacity: 0.1,
+          });
+
+          gsap.to(rightg.value, {
+           scrollTrigger: {
+            trigger: txtone.value,
+            start: "top +=300px",
+            end: "+=300",
+            scrub: true,
+            toggleClass: "active",
+            markers: false,
+           },
+           opacity: 1,
+           duration: 0.6,
+          });
+          //
+          gsap.set(righta.value, {
+            opacity: 0.1,
+          });
+
+          gsap.to(righta.value, {
+           scrollTrigger: {
+            trigger: txtone.value,
+            start: "top +=300px",
+            end: "+=300",
+            scrub: true,
+            toggleClass: "active",
+            markers: false,
+           },
+           opacity: 1,
+           duration: 0.6,
+          });
+          //
+          gsap.set(righto.value, {
+            opacity: 0.1,
+          });
+
+          gsap.to(righto.value, {
+           scrollTrigger: {
+            trigger: txtone.value,
+            start: "top +=300px",
+            end: "+=300",
+            scrub: true,
+            toggleClass: "active",
+            markers: false,
+           },
+           opacity: 1,
+           duration: 0.6,
+          });
+          //
+          gsap.set(rightb.value, {
+            opacity: 0.1,
+          });
+
+          gsap.to(rightb.value, {
+           scrollTrigger: {
+            trigger: bg_two.value,
+            start: "top +=300px",
+            end: "+=300",
+            scrub: true,
+            toggleClass: "active",
+            markers: false,
+           },
+           opacity: 1,
+           duration: 0.6,
+          });
+          //
+          gsap.set(rightaa.value, {
+            opacity: 0.1,
+          });
+
+          gsap.to(rightaa.value, {
+           scrollTrigger: {
+            trigger: bg_two.value,
+            start: "top +=300px",
+            end: "+=300",
+            scrub: true,
+            toggleClass: "active",
+            markers: false,
+           },
+           opacity: 1,
+           duration: 0.6,
+          });
+          //
+          gsap.set(rightn.value, {
+            opacity: 0.1,
+          });
+
+          gsap.to(rightn.value, {
+           scrollTrigger: {
+            trigger: bg_two.value,
+            start: "top +=300px",
+            end: "+=300",
+            scrub: true,
+            toggleClass: "active",
+            markers: false,
+           },
+           opacity: 1,
+           duration: 0.6,
+          });
+          //
+          gsap.set(rightgg.value, {
+            opacity: 0.1,
+          });
+
+          gsap.to(rightgg.value, {
+           scrollTrigger: {
+            trigger: bg_two.value,
+            start: "top +=300px",
+            end: "+=300",
+            scrub: true,
+            toggleClass: "active",
+            markers: false,
+           },
+           opacity: 1,
+           duration: 0.6,
+          });
+          //
+          gsap.set(rightc.value, {
+            opacity: 0.1,
+          });
+
+          gsap.to(rightc.value, {
+           scrollTrigger: {
+            trigger: bg_two.value,
+            start: "top +=200px",
+            end: "+=300",
+            scrub: true,
+            toggleClass: "active",
+            markers: false,
+           },
+           opacity: 1,
+           duration: 0.6,
+          });
+          //
+          gsap.set(rightr.value, {
+            opacity: 0.1,
+          });
+
+          gsap.to(rightr.value, {
+           scrollTrigger: {
+            trigger: bg_two.value,
+            start: "top +=200px",
+            end: "+=300",
+            scrub: true,
+            toggleClass: "active",
+            markers: false,
+           },
+           opacity: 1,
+           duration: 0.6,
+          });
+          //
+          gsap.set(righte.value, {
+            opacity: 0.1,
+          });
+
+          gsap.to(righte.value, {
+           scrollTrigger: {
+            trigger: bg_two.value,
+            start: "top +=200px",
+            end: "+=300",
+            scrub: true,
+            toggleClass: "active",
+            markers: false,
+           },
+           opacity: 1,
+           duration: 0.6,
+          });
+          //
+          gsap.set(rightaaa.value, {
+            opacity: 0.1,
+          });
+
+          gsap.to(rightaaa.value, {
+           scrollTrigger: {
+            trigger: bg_two.value,
+            start: "top +=200px",
+            end: "+=300",
+            scrub: true,
+            toggleClass: "active",
+            markers: false,
+           },
+           opacity: 1,
+           duration: 0.6,
+          });
+          //
+          gsap.set(rightt.value, {
+            opacity: 0.1,
+          });
+
+          gsap.to(rightt.value, {
+           scrollTrigger: {
+            trigger: bg_two.value,
+            start: "top +=200px",
+            end: "+=300",
+            scrub: true,
+            toggleClass: "active",
+            markers: false,
+           },
+           opacity: 1,
+           duration: 0.6,
+          });
+          //
+          gsap.set(righti.value, {
+            opacity: 0.1,
+          });
+
+          gsap.to(righti.value, {
+           scrollTrigger: {
+            trigger: bg_two.value,
+            start: "top +=200px",
+            end: "+=300",
+            scrub: true,
+            toggleClass: "active",
+            markers: false,
+           },
+           opacity: 1,
+           duration: 0.6,
+          });
+          //
+          gsap.set(rightv.value, {
+            opacity: 0.1,
+          });
+
+          gsap.to(rightv.value, {
+           scrollTrigger: {
+            trigger: bg_two.value,
+            start: "top +=200px",
+            end: "+=300",
+            scrub: true,
+            toggleClass: "active",
+            markers: false,
+           },
+           opacity: 1,
+           duration: 0.6,
+          });
+          //
+          gsap.set(rightii.value, {
+            opacity: 0.1,
+          });
+
+          gsap.to(rightii.value, {
+           scrollTrigger: {
+            trigger: bg_two.value,
+            start: "top +=200px",
+            end: "+=300",
+            scrub: true,
+            toggleClass: "active",
+            markers: false,
+           },
+           opacity: 1,
+           duration: 0.6,
+          });
+          //
+          gsap.set(righttt.value, {
+            opacity: 0.1,
+          });
+
+          gsap.to(righttt.value, {
+           scrollTrigger: {
+            trigger: bg_two.value,
+            start: "top +=200px",
+            end: "+=300",
+            scrub: true,
+            toggleClass: "active",
+            markers: false,
+           },
+           opacity: 1,
+           duration: 0.6,
+          });
+          //
+          gsap.set(righty.value, {
+            opacity: 0.1,
+          });
+
+          gsap.to(righty.value, {
+           scrollTrigger: {
+            trigger: bg_two.value,
+            start: "top +=200px",
+            end: "+=300",
+            scrub: true,
+            toggleClass: "active",
+            markers: false,
+           },
+           opacity: 1,
+           duration: 0.6,
+          });
+          //
+          gsap.to("body", {
+            scrollTrigger: {
+              trigger: bg_index_1.value,
+              start: "top center",
+              end: "bottom center",
+              toggleClass: {targets: "body", className: "bg-color-white"},
+              onEnter: () => document.body.classList.remove("bg-color-yellow"),
+              onLeaveBack: () => document.body.classList.remove("bg-color-white"),
+            }
+          });
+
+          gsap.to("body", {
+            scrollTrigger: {
+              trigger: bg_index_3.value,
+              start: "bottom center",
+              end: "bottom top",
+              toggleClass: {targets: "body", className: "bg-color-yellow"},
+              onEnter: () => document.body.classList.remove("bg-color-white"),
+              onLeaveBack: () => document.body.classList.add("bg-color-white"),
+            }
+          });
+          //
+          gsap.to(txt.value, {
+            scrollTrigger: {
+              trigger: bg_index_1.value,
+              start: "top center",
+              end: "bottom center",
+              onEnter: () => {
+                txt.value.classList.remove("text-white");
+                document.querySelectorAll('.text_body').forEach(el => el.classList.add("txt-gradient"));
+                document.querySelectorAll('.text_body_bl').forEach(el => el.classList.add("txt-gradient-bl"));
+                document.querySelectorAll('.text_body_br').forEach(el => el.classList.add("txt-gradient-br"));
+              },
+              onLeaveBack: () => {
+                txt.value.classList.add("text-white");
+                document.querySelectorAll('.text_body').forEach(el => el.classList.remove("txt-gradient"));
+                document.querySelectorAll('.text_body_bl').forEach(el => el.classList.remove("txt-gradient-bl"));
+                document.querySelectorAll('.text_body_br').forEach(el => el.classList.remove("txt-gradient-br"));
+              },
+            }
+          });
+
+          gsap.to(txt.value, {
+            scrollTrigger: {
+              trigger: bg_index_4.value,
+              start: "top center",
+              end: "bottom center",
+              onEnter: () => {
+                txt.value.classList.add("text-white");
+                document.querySelectorAll('.text_body').forEach(el => el.classList.remove("txt-gradient"));
+                document.querySelectorAll('.text_body_bl').forEach(el => el.classList.remove("txt-gradient-bl"));
+                document.querySelectorAll('.text_body_br').forEach(el => el.classList.remove("txt-gradient-br"));
+              },
+              onLeaveBack: () => {
+                txt.value.classList.remove("text-white");
+                document.querySelectorAll('.text_body').forEach(el => el.classList.add("txt-gradient"));
+                document.querySelectorAll('.text_body_bl').forEach(el => el.classList.add("txt-gradient-bl"));
+                document.querySelectorAll('.text_body_br').forEach(el => el.classList.add("txt-gradient-br"));
+              },
+            }
+          });
         },
       });
     };
