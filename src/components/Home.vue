@@ -1331,7 +1331,7 @@ class="relative overflow-hidden">
       class="w-full pb-8 px-8 sm:px-0"
       loading="lazy">
       <h3 
-      class="text-custom-blue text-center tracking-[3.8px] text-[21px] sm:text-[28px] md:text-[40px] font-GenJyuuGothicBold">
+      class="text-custom-blue text-center tracking-[3.8px] text-[18px] sm:text-[28px] md:text-[40px] font-GenJyuuGothicBold">
       2024年全台規模最大的動漫盛會</h3>
       <hr 
       class="h-[2px] border-0 my-4 mx-auto w-[128px]"
@@ -1370,7 +1370,7 @@ class="relative overflow-hidden">
       class="w-full pb-8 px-8 sm:px-0"
       loading="lazy">
       <h3 
-      class="text-custom-blue text-center tracking-[3.8px] text-[21px] sm:text-[28px] md:text-[40px] font-GenJyuuGothicBold">
+      class="text-custom-blue text-center tracking-[3.8px] text-[18px] sm:text-[28px] md:text-[40px] font-GenJyuuGothicBold">
       台灣首場規模最大的航海王特展</h3>
       <hr 
       class="h-[2px] border-0 my-4 mx-auto w-[128px]"
@@ -1409,7 +1409,7 @@ class="relative overflow-hidden">
       class="w-full pb-8 px-8 sm:px-0"
       loading="lazy">
       <h3 
-      class="text-custom-blue text-center tracking-[3.8px] text-[21px] sm:text-[28px] md:text-[40px] font-GenJyuuGothicBold">
+      class="text-custom-blue text-center tracking-[3.8px] text-[18px] sm:text-[28px] md:text-[40px] font-GenJyuuGothicBold">
       台灣首場沉浸式航海王運動會</h3>
       <hr 
       class="h-[2px] border-0 my-4 mx-auto w-[128px]"
@@ -1447,7 +1447,7 @@ class="relative overflow-hidden">
       class="text-white text-center leading-[32px] tracking-[1px] text-[21px] font-GenJyuuGothicBold">
       合作申請</h5>
       <p 
-      class="text-white text-center leading-[18px] tracking-[1px] text-[12px] sm:text-[14px] pb-12 font-GenJyuuGothicRegular">
+      class="text-white text-center leading-[18px] tracking-[1px] text-[10px] sm:text-[14px] pb-12 font-GenJyuuGothicRegular">
       Make dreams come true, make everything happen.</p>
       <form @submit="submitForm" action="https://api.web3forms.com/submit" method="POST" id="form">
         <input type="hidden" name="access_key" value="9220bf48-6e83-4f37-8cf9-ad5d0ab81f8f">
