@@ -1331,7 +1331,7 @@ class="relative overflow-hidden">
       class="w-full pb-8 px-8 sm:px-0"
       loading="lazy">
       <h3 
-      class="text-custom-blue text-center tracking-[3.8px] text-[24px] sm:text-[28px] md:text-[40px] font-GenJyuuGothicBold">
+      class="text-custom-blue text-center tracking-[3.8px] text-[21px] sm:text-[28px] md:text-[40px] font-GenJyuuGothicBold">
       2024年全台規模最大的動漫盛會</h3>
       <hr 
       class="h-[2px] border-0 my-4 mx-auto w-[128px]"
@@ -1340,7 +1340,7 @@ class="relative overflow-hidden">
       class="text-custom-blue text-center leading-[24px] tracking-[1px] text-[16px] pb-2 font-GenJyuuGothicBold">
       ONE PIECE 動畫 25 周年璀璨之夜</h5>
       <p 
-      class="text-custom-gray text-center leading-[18px] tracking-[1px] text-[14px] font-GenJyuuGothicRegular">
+      class="text-custom-gray text-center leading-[18px] tracking-[1px] text-[12px] sm:text-[14px] font-GenJyuuGothicRegular">
       63萬人參與，37億觀光產值，次將航海王結合無人
       <br>機與燈光秀，搭配動畫組曲，打造視覺與聽覺饗宴！</p>
 
@@ -1370,7 +1370,7 @@ class="relative overflow-hidden">
       class="w-full pb-8 px-8 sm:px-0"
       loading="lazy">
       <h3 
-      class="text-custom-blue text-center tracking-[3.8px] text-[24px] sm:text-[28px] md:text-[40px] font-GenJyuuGothicBold">
+      class="text-custom-blue text-center tracking-[3.8px] text-[21px] sm:text-[28px] md:text-[40px] font-GenJyuuGothicBold">
       台灣首場規模最大的航海王特展</h3>
       <hr 
       class="h-[2px] border-0 my-4 mx-auto w-[128px]"
@@ -1379,7 +1379,7 @@ class="relative overflow-hidden">
       class="text-custom-blue text-center leading-[24px] tracking-[1px] text-[16px] pb-2 font-GenJyuuGothicBold">
       ONE PIECE 動畫 20 週年紀念特展</h5>
       <p 
-      class="text-custom-gray text-center leading-[18px] tracking-[1px] text-[14px] font-GenJyuuGothicRegular">
+      class="text-custom-gray text-center leading-[18px] tracking-[1px] text-[12px] sm:text-[14px] font-GenJyuuGothicRegular">
       百家媒體聚焦，10萬海賊迷朝聖，五感體驗、巨型公
       <br>仔與 AR 互動創展覽新高度！</p>
 
@@ -1409,7 +1409,7 @@ class="relative overflow-hidden">
       class="w-full pb-8 px-8 sm:px-0"
       loading="lazy">
       <h3 
-      class="text-custom-blue text-center tracking-[3.8px] text-[24px] sm:text-[28px] md:text-[40px] font-GenJyuuGothicBold">
+      class="text-custom-blue text-center tracking-[3.8px] text-[21px] sm:text-[28px] md:text-[40px] font-GenJyuuGothicBold">
       台灣首場沉浸式航海王運動會</h3>
       <hr 
       class="h-[2px] border-0 my-4 mx-auto w-[128px]"
@@ -1418,7 +1418,7 @@ class="relative overflow-hidden">
       class="text-custom-blue text-center leading-[24px] tracking-[1px] text-[16px] pb-2 font-GenJyuuGothicBold">
       ONE PIECE SPORT 航海王運動會</h5>
       <p 
-      class="text-custom-gray text-center leading-[18px] tracking-[1px] text-[14px] font-GenJyuuGothicRegular">
+      class="text-custom-gray text-center leading-[18px] tracking-[1px] text-[12px] sm:text-[14px] font-GenJyuuGothicRegular">
       串聯航海王冒險劇情與結合慢跑、 泡泡關卡及一百米
       <br>滑⽔⽔道，打造「全⺠皆能參與」的沉浸式活動!</p>
 
@@ -1447,7 +1447,7 @@ class="relative overflow-hidden">
       class="text-white text-center leading-[32px] tracking-[1px] text-[21px] font-GenJyuuGothicBold">
       合作申請</h5>
       <p 
-      class="text-white text-center leading-[18px] tracking-[1px] text-[14px] pb-12 font-GenJyuuGothicRegular">
+      class="text-white text-center leading-[18px] tracking-[1px] text-[12px] sm:text-[14px] pb-12 font-GenJyuuGothicRegular">
       Make dreams come true, make everything happen.</p>
       <form @submit="submitForm" action="https://api.web3forms.com/submit" method="POST" id="form">
         <input type="hidden" name="access_key" value="9220bf48-6e83-4f37-8cf9-ad5d0ab81f8f">
