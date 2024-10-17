@@ -162,7 +162,7 @@ export default{
           gsap.to(logo.value, {
            scrollTrigger: {
             start: "top -80",
-            end: "5500", 
+            end: "5300", 
             toggleClass: {
               className: 'logo-to', 
               targets: logo.value
@@ -182,7 +182,7 @@ export default{
           gsap.to(logotxt.value, {
            scrollTrigger: {
             start: "top -10",
-            end: "5500",
+            end: "5300",
             toggleClass: {
               className: 'logotxt-to', 
               targets: logotxt.value
@@ -1541,7 +1541,7 @@ class="relative overflow-hidden">
     style="text-indent: 0em;">GAO BANG CREATIVITY</h5>
     <p 
     ref="titlethree"
-    class="text-white text-center z-40 leading-[30px] tracking-[1px] pt-[500px]">
+    class="text-white text-center z-40 leading-[30px] tracking-[1px] pt-[400px] sm:pt-[500px]">
       <span class="font-GenJyuuGothicBold">與你一起，用創意渲染快樂</span><br>
       <span class="font-GenJyuuGothicRegular">Share＆Love Peace</span><br><br>
     </p>
