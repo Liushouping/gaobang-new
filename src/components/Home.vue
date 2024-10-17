@@ -199,7 +199,7 @@ export default{
           gsap.to(topbgtxt.value, {
            scrollTrigger: {
             trigger: bg_two.value,
-            start: "top +=800px",
+            start: "top +=600px",
             end: "100",
             scrub: true,
             toggleClass: "active",
@@ -219,7 +219,7 @@ export default{
           gsap.to(bgtxt.value, {
            scrollTrigger: {
             trigger: bg_two.value,
-            start: "top +=800px",
+            start: "top +=600px",
             end: "+=300",
             scrub: true,
             toggleClass: "active",
