@@ -169,7 +169,7 @@ export default{
           gsap.to(logo.value, {
            scrollTrigger: {
             start: "top -80",
-            end: "4300", 
+            end: "4450", 
             toggleClass: {
               className: 'logo-to', 
               targets: logo.value
@@ -189,7 +189,7 @@ export default{
           gsap.to(logotxt.value, {
            scrollTrigger: {
             start: "top -10",
-            end: "4300",
+            end: "4450",
             toggleClass: {
               className: 'logotxt-to', 
               targets: logotxt.value
