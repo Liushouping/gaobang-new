@@ -568,3 +568,8 @@ body {
 .txt-color-white {
   color: white;
 }
+
+.blur200px {
+  -webkit-filter: blur(200px);
+  filter: blur(200px);
+}

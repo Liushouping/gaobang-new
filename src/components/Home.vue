@@ -2477,22 +2477,14 @@ class="relative overflow-hidden">
 
         <div 
         class="flex justify-between items-center w-full">
-          <div class="text-white text-[14px] font-GenJyuuGothicBold">{{ formResult }}</div>
+          <div class="flex flex-row w-full text-white text-[14px] tracking-[1px] font-GenJyuuGothicBold">
+            {{ formResult }}</div>
           <button 
           type="submit"
           :disabled="isSubmitting"
           class="rounded-2xl px-8 py-2 text-[14px] text-white font-GenJyuuGothicBold inline-flex justify-center items-center"
           style="background: linear-gradient(to right, #9A1184 0%, #E33733 35%, #F4BF20 70%);">
-          <svg 
-            v-if="isSubmitting"
-            class="animate-spin h-5 w-5 mr-3" 
-            xmlns="http://www.w3.org/2000/svg" 
-            fill="none" 
-            viewBox="0 0 24 24">
-            <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
-            <path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
-          </svg>
-            {{ isSubmitting ? '...' : 'SUBMIT' }}
+            {{ isSubmitting ? 'SUBMIT' : 'SUBMIT' }}
           </button>
         </div>
       </div>
@@ -2528,26 +2520,3 @@ class="relative overflow-hidden">
   </footer>
 </div>
 </template>
-
-
-<style>
-  .blur200px {
-    -webkit-filter: blur(200px);
-    filter: blur(200px);
-  }
-
-  .bg-color-white {
-    background-color: #ffffff !important;
-  }
-
-  .bg-color-yellow {
-    background-color: #E6B020 !important;
-  }
-
-  .txt-gradient {
-    background: linear-gradient(to right, #9A1184 0%, #E33733 35%, #F4BF20 70%);
-    -webkit-background-clip: text;
-    background-clip: text;
-    -webkit-text-fill-color: transparent;
-  }
-</style>
