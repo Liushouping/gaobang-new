@@ -35,9 +35,10 @@ export default{
     const bg_index_3 = ref(null);
     const bg_index_4 = ref(null);
     // 邊角文字
+    const txt = ref(null);
     const topbgtxt = ref(null);
     const bgtxt = ref(null);
-    // 上面
+    // ��
     const topl = ref(null);
     // 左邊
     const lefta = ref(null);
@@ -1019,7 +1020,6 @@ export default{
            duration: 0.6,
           });
           //
-          // 添加背景颜色变化的动画
           gsap.to("body", {
             scrollTrigger: {
               trigger: bg_index_1.value,
@@ -1041,7 +1041,46 @@ export default{
               onLeaveBack: () => document.body.classList.add("bg-color-white"),
             }
           });
+          //
+          gsap.to(txt.value, {
+            scrollTrigger: {
+              trigger: bg_index_1.value,
+              start: "top center",
+              end: "bottom center",
+              onEnter: () => {
+                txt.value.classList.remove("text-white");
+                document.querySelectorAll('.text_body').forEach(el => el.classList.add("txt-gradient"));
+                document.querySelectorAll('.text_body_bl').forEach(el => el.classList.add("txt-gradient-bl"));
+                document.querySelectorAll('.text_body_br').forEach(el => el.classList.add("txt-gradient-br"));
+              },
+              onLeaveBack: () => {
+                txt.value.classList.add("text-white");
+                document.querySelectorAll('.text_body').forEach(el => el.classList.remove("txt-gradient"));
+                document.querySelectorAll('.text_body_bl').forEach(el => el.classList.remove("txt-gradient-bl"));
+                document.querySelectorAll('.text_body_br').forEach(el => el.classList.remove("txt-gradient-br"));
+              },
+            }
+          });
 
+          gsap.to(txt.value, {
+            scrollTrigger: {
+              trigger: bg_index_4.value,
+              start: "top center",
+              end: "bottom center",
+              onEnter: () => {
+                txt.value.classList.add("text-white");
+                document.querySelectorAll('.text_body').forEach(el => el.classList.remove("txt-gradient"));
+                document.querySelectorAll('.text_body_bl').forEach(el => el.classList.remove("txt-gradient-bl"));
+                document.querySelectorAll('.text_body_br').forEach(el => el.classList.remove("txt-gradient-br"));
+              },
+              onLeaveBack: () => {
+                txt.value.classList.remove("text-white");
+                document.querySelectorAll('.text_body').forEach(el => el.classList.add("txt-gradient"));
+                document.querySelectorAll('.text_body_bl').forEach(el => el.classList.add("txt-gradient-bl"));
+                document.querySelectorAll('.text_body_br').forEach(el => el.classList.add("txt-gradient-br"));
+              },
+            }
+          });
           //
 
         },
@@ -1051,8 +1090,6 @@ export default{
     onMounted(() => {
       ScrollTrigger.refresh();
       gsapSet();
-      //
-      document.body.style.backgroundColor = "#E6B020";
     });
     onUnmounted(() => {
       triggers.forEach((trigger) => {
@@ -1086,6 +1123,7 @@ export default{
       bg_index_3,
       bg_index_4,
       // 邊角文字
+      txt,
       topbgtxt,
       bgtxt,
       // 上面
@@ -1143,9 +1181,12 @@ export default{
 <div 
 class="relative overflow-hidden">
   <!--  -->
+  <div 
+  ref="txt"
+  class="text-white">
   <div ref="topbgtxt">
     <div 
-    class="fixed top-[1rem] left-[1rem] sm:left-[2rem] flex flex-row text-[10px] sm:text-[18px] text-white z-40 tracking-[16px] sm:tracking-[36px] md:tracking-[28px] font-GenJyuuGothicBold">
+    class="text_body fixed top-[1rem] left-[1rem] sm:left-[2rem] flex flex-row text-[10px] sm:text-[18px] z-40 tracking-[16px] sm:tracking-[36px] md:tracking-[28px] font-GenJyuuGothicBold">
         <span>G</span>
         <span ref="topl">A</span>
         <span ref="topl">O</span>
@@ -1164,9 +1205,10 @@ class="relative overflow-hidden">
         <span ref="topl">Y</span>
     </div>
   </div>
-  <div ref="bgtxt">
+  <div 
+  ref="bgtxt">
     <div 
-    class="fixed top-[2.9rem] sm:top-[3.6rem] left-[1rem] sm:left-[2rem] flex flex-col text-[10px] sm:text-[18px] text-white z-40 font-GenJyuuGothicBold justify-center items-center">
+    class="text_body_bl fixed top-[2.9rem] sm:top-[3.6rem] left-[1rem] sm:left-[2rem] flex flex-col text-[10px] sm:text-[18px] z-40 font-GenJyuuGothicBold justify-center items-center">
         <span ref="lefta">A</span>
         <span ref="lefto" class="mt-[0.7rem] md:mt-[14px]">O</span>
 
@@ -1187,20 +1229,21 @@ class="relative overflow-hidden">
         <span ref="lefty" class="mt-[0.7rem] md:mt-[14px]">Y</span>
 
     </div>
+
     <div 
-    class="fixed bottom-[3.5rem] sm:bottom-[1rem] right-[0rem] flex flex-col text-[10px] sm:text-[18px] text-white tracking-[18px] sm:tracking-[24px] z-40 font-GenJyuuGothicBold">
-        <div class="flex flex-row justify-end">
+    class="fixed bottom-[3.5rem] sm:bottom-[1rem] right-[0rem] flex flex-col text-[10px] sm:text-[18px] tracking-[18px] sm:tracking-[24px] z-40 font-GenJyuuGothicBold">
+        <div class="flex flex-row justify-end text_body_br">
           <span ref="rightg">G</span>
           <span ref="righta">A</span>
           <span ref="righto">O</span>
         </div>
-        <div class="flex flex-row justify-end mt-[10px]">
+        <div class="flex flex-row justify-end mt-[10px] text_body_br">
           <span ref="rightb">B</span>
           <span ref="rightaa">A</span>
           <span ref="rightn">N</span>
           <span ref="rightgg">G</span>
         </div>
-        <div class="flex flex-row justify-end mt-[10px]">
+        <div class="flex flex-row justify-end mt-[10px] text_body_br">
           <span ref="rightc">C</span>
           <span ref="rightr">R</span>
           <span ref="righte">E</span>
@@ -1214,6 +1257,9 @@ class="relative overflow-hidden">
         </div>
     </div>
   </div>
+  </div>
+
+
   <!-- -->
   <!--  -->
   <div class="card-colors">
@@ -1398,10 +1444,10 @@ class="relative overflow-hidden">
     ref="bg_index_4title"
     class="max-w-[960px] w-full flex flex-col z-[41]">
       <h5 
-      class="text-gray-100 text-center leading-[32px] tracking-[1px] text-[21px] font-GenJyuuGothicBold">
+      class="text-white text-center leading-[32px] tracking-[1px] text-[21px] font-GenJyuuGothicBold">
       合作申請</h5>
       <p 
-      class="text-gray-100 text-center leading-[18px] tracking-[1px] text-[14px] pb-12 font-GenJyuuGothicRegular">
+      class="text-white text-center leading-[18px] tracking-[1px] text-[14px] pb-12 font-GenJyuuGothicRegular">
       Make dreams come true, make everything happen.</p>
       <form @submit="submitForm" action="https://api.web3forms.com/submit" method="POST" id="form">
         <input type="hidden" name="access_key" value="9220bf48-6e83-4f37-8cf9-ad5d0ab81f8f">
@@ -1410,38 +1456,38 @@ class="relative overflow-hidden">
       class="w-full md:w-1/2 px-8 sm:px-20 md:pl-16 md:pr-2 xl:px-2">
 
       <label 
-      class="block uppercase tracking-[1px] text-gray-100 text-[14px] font-bold mb-2 w-full font-GenJyuuGothicBold">
+      class="block uppercase tracking-[1px] text-white text-[14px] font-bold mb-2 w-full font-GenJyuuGothicBold">
         姓名
       </label>
       <input 
-      class="appearance-none block w-full bg-gray-100 text-gray-700 text-[14px] border rounded-xl py-2 px-3 mb-3 font-GenJyuuGothicBold"  
+      class="appearance-none block w-full bg-white text-gray-700 text-[14px] border rounded-xl py-2 px-3 mb-3 font-GenJyuuGothicBold"  
       type="text"
       required>
 
       <label 
-      class="block uppercase tracking-[1px] text-gray-100 text-[14px] font-bold mb-2 w-full font-GenJyuuGothicBold">
+      class="block uppercase tracking-[1px] text-white text-[14px] font-bold mb-2 w-full font-GenJyuuGothicBold">
         公司名稱
       </label>
       <input 
-      class="appearance-none block w-full bg-gray-100 text-gray-700 text-[14px] border rounded-xl py-2 px-3 mb-3 font-GenJyuuGothicBold"  
+      class="appearance-none block w-full bg-white text-gray-700 text-[14px] border rounded-xl py-2 px-3 mb-3 font-GenJyuuGothicBold"  
       type="text"
       required>
 
       <label 
-      class="block uppercase tracking-[1px] text-gray-100 text-[14px] font-bold mb-2 w-full font-GenJyuuGothicBold">
+      class="block uppercase tracking-[1px] text-white text-[14px] font-bold mb-2 w-full font-GenJyuuGothicBold">
         EMAIL
       </label>
       <input 
-      class="appearance-none block w-full bg-gray-100 text-gray-700 text-[14px] border rounded-xl py-2 px-3 mb-3 font-GenJyuuGothicBold"  
+      class="appearance-none block w-full bg-white text-gray-700 text-[14px] border rounded-xl py-2 px-3 mb-3 font-GenJyuuGothicBold"  
       type="email"
       required>
 
       <label 
-      class="block uppercase tracking-[1px] text-gray-100 text-[14px] font-bold mb-2 w-full font-GenJyuuGothicBold">
+      class="block uppercase tracking-[1px] text-white text-[14px] font-bold mb-2 w-full font-GenJyuuGothicBold">
         合作類別
       </label>
       <input 
-      class="appearance-none block w-full bg-gray-100 text-gray-700 text-[14px] border rounded-xl py-2 px-3 mb-3 font-GenJyuuGothicBold"  
+      class="appearance-none block w-full bg-white text-gray-700 text-[14px] border rounded-xl py-2 px-3 mb-3 font-GenJyuuGothicBold"  
       type="text"
       required>
 
@@ -1450,18 +1496,18 @@ class="relative overflow-hidden">
       class="w-full md:w-1/2 h-[280px] px-8 sm:px-20 md:pr-16 md:pl-2 xl:px-2">
 
         <label 
-        class="block uppercase tracking-[1px] text-gray-100 text-[14px] font-bold mb-2 w-full font-GenJyuuGothicBold">
+        class="block uppercase tracking-[1px] text-white text-[14px] font-bold mb-2 w-full font-GenJyuuGothicBold">
         期望合作的內容概述
         </label>
         <textarea 
         name="message" 
         rows="6" 
-        class="block w-full h-full bg-gray-100 rounded-xl text-gray-700 text-[14px] border py-2 px-3 mb-3 font-GenJyuuGothicBold"
+        class="block w-full h-full bg-white rounded-xl text-gray-700 text-[14px] border py-2 px-3 mb-3 font-GenJyuuGothicBold"
         required></textarea>
 
         <div 
         class="flex justify-between items-center w-full">
-          <div class="text-gray-100 text-[14px] font-GenJyuuGothicBold">{{ formResult }}</div>
+          <div class="text-white text-[14px] font-GenJyuuGothicBold">{{ formResult }}</div>
           <button 
           type="submit"
           :disabled="isSubmitting"
@@ -1526,5 +1572,12 @@ class="relative overflow-hidden">
 
   .bg-color-yellow {
     background-color: #E6B020 !important;
+  }
+
+  .txt-gradient {
+    background: linear-gradient(to right, #9A1184 0%, #E33733 35%, #F4BF20 70%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
   }
 </style>

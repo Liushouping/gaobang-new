@@ -14,10 +14,8 @@ module.exports = {
       letterSpacing: {
       },
       fontFamily: {
-        // sans: ['Comfortaa-Light'],
-        GenJyuuGothicBold: ['GenJyuuGothicBold'],
-        GenJyuuGothicRegular: ['GenJyuuGothicRegular'],
-        // ComfortaaBold: ['Comfortaa-Bold'],
+        GenJyuuGothicBold: ['GenJyuuGothicBold', 'SweiGothicCJKtcBold'],
+        GenJyuuGothicRegular: ['GenJyuuGothicRegular', 'SweiGothicCJKtcRegular'],
       }
     },
   },

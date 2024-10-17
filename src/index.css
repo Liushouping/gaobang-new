@@ -30,6 +30,25 @@
   font-display: swap;
   src: url(/fonts/GenJyuuGothicBold.ttf) format("opentype");
 }
+@font-face {
+  font-family: 'SweiGothicCJKtcRegular';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(/fonts/SweiGothicCJKtcRegular.ttf) format("opentype");
+}
+@font-face {
+  font-family: 'SweiGothicCJKtcBold';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url(/fonts/SweiGothicCJKtcBold.ttf) format("opentype");
+}
+
+body {
+  background: #E6B020;
+  transition: background-color 0.5s ease;
+}
 
 .logo {
     position: fixed;
@@ -510,6 +529,42 @@
   background: #fff;
 }
 
-body {
-  transition: background-color 0.5s ease;
+.txt-gradient {
+  background: -webkit-linear-gradient(
+    45deg,
+    #9A1184 50%,
+    #E33733 30%,
+    #F4BF20 95%
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: white;
+}
+
+.txt-gradient-bl {
+  background: -webkit-linear-gradient(
+    45deg,
+    #F4BF20 50%,
+    #E33733 30%,
+    #9A1184 95%
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: white;
+}
+
+.txt-gradient-br {
+  background: -webkit-linear-gradient(
+    45deg,
+    #9A1184 70%,
+    #E33733 30%,
+    #F4BF20 95%
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: white;
+}
+
+.txt-color-white {
+  color: white;
 }
