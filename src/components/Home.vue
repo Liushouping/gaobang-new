@@ -162,7 +162,7 @@ export default{
           gsap.to(logo.value, {
            scrollTrigger: {
             start: "top -80",
-            end: "5300", 
+            end: "5000", 
             toggleClass: {
               className: 'logo-to', 
               targets: logo.value
@@ -182,7 +182,7 @@ export default{
           gsap.to(logotxt.value, {
            scrollTrigger: {
             start: "top -10",
-            end: "5300",
+            end: "5000",
             toggleClass: {
               className: 'logotxt-to', 
               targets: logotxt.value
@@ -1083,6 +1083,48 @@ export default{
           });
           //
 
+        },
+        "(min-width: 480px)": () => {
+          //
+          gsap.from(logo.value, {
+            y: 4000,
+            opacity: 0,
+            scale: 0,
+            duration: 0.75,
+          });
+          gsap.to(logo.value, {
+           scrollTrigger: {
+            start: "top -80",
+            end: "5500", 
+            toggleClass: {
+              className: 'logo-to', 
+              targets: logo.value
+            },
+           },
+           opacity: 1,
+           scale: 1
+          });
+          //
+          gsap.from(logotxt.value, {
+            y: 2000,
+            opacity: 0,
+            scale: 0,
+            delay: 1,
+            duration: 0.5,
+          });
+          gsap.to(logotxt.value, {
+           scrollTrigger: {
+            start: "top -10",
+            end: "5500",
+            toggleClass: {
+              className: 'logotxt-to', 
+              targets: logotxt.value
+            },
+
+           },
+           scale: 1,
+          });
+          //
         },
       });
     };
