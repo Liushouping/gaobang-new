@@ -2203,9 +2203,9 @@ class="relative overflow-hidden">
   <!-- -->
   <!--  -->
   <div class="card-colors">
-    <div class="c c-orange fixed left-8 bottom-8 z-10 w-[450px] h-[450px]"></div>
-    <div class="c c-yellow fixed right-8 bottom-8 z-10 w-[450px] h-[450px]"></div>
-    <div class="c c-pink fixed left-[8px] lg:left-[450px] top-2 z-10 w-[450px] h-[450px]"></div>
+    <div class="c c-orange fixed left-8 bottom-8 z-10 w-[450px] h-[450px] blur-[180px]"></div>
+    <div class="c c-yellow fixed right-8 bottom-8 z-10 w-[450px] h-[450px] blur-[70px]"></div>
+    <div class="c c-pink fixed left-[8px] lg:left-[450px] top-2 z-10 w-[450px] h-[450px] blur-[180px]"></div>
   </div>
   <!-- 1 -->
   <section 
