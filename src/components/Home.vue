@@ -97,11 +97,11 @@ export default{
          }
     };
 
-    // 添加新的响应式变量
+    // 
     const formResult = ref('');
     const isSubmitting = ref(false);
 
-    // 添加新的表单提交函数
+    // 
     const submitForm = async (event) => {
       event.preventDefault();
       isSubmitting.value = true;
@@ -141,10 +141,17 @@ export default{
       }
     };
 
-    // 添加新的函数
+    // pc
     const scrollToForm = () => {
       window.scrollTo({
         top: 4650,
+        behavior: 'smooth'
+      });
+    };
+    // mobile
+    const mbscrollToForm = () => {
+      window.scrollTo({
+        top: 3500,
         behavior: 'smooth'
       });
     };
@@ -162,7 +169,7 @@ export default{
           gsap.to(logo.value, {
            scrollTrigger: {
             start: "top -80",
-            end: "4000", 
+            end: "4300", 
             toggleClass: {
               className: 'logo-to', 
               targets: logo.value
@@ -182,7 +189,7 @@ export default{
           gsap.to(logotxt.value, {
            scrollTrigger: {
             start: "top -10",
-            end: "4000",
+            end: "4300",
             toggleClass: {
               className: 'logotxt-to', 
               targets: logotxt.value
@@ -1212,6 +1219,7 @@ export default{
       // 頁尾
       Bottomdata,
       scrollToForm,
+      mbscrollToForm,
       formResult,
       isSubmitting,
       submitForm
@@ -1386,12 +1394,22 @@ class="relative overflow-hidden">
       63萬人參與，37億觀光產值，次將航海王結合無人
       <br>機與燈光秀，搭配動畫組曲，打造視覺與聽覺饗宴！</p>
 
-      <div class="flex justify-center pt-8">
+      <div class="hidden sm:flex justify-center pt-8">
       <button 
       type="button"
       class="rounded-2xl px-8 py-2 text-[14px] text-white font-GenJyuuGothicBold"
       style="background: linear-gradient(to right, #9A1184 0%, #E33733 35%, #F4BF20 70%);"
       @click="scrollToForm">
+        合作表單
+      </button>
+      </div>
+
+      <div class="flex sm:hidden justify-center pt-8">
+      <button 
+      type="button"
+      class="rounded-2xl px-8 py-2 text-[14px] text-white font-GenJyuuGothicBold"
+      style="background: linear-gradient(to right, #9A1184 0%, #E33733 35%, #F4BF20 70%);"
+      @click="mbscrollToForm">
         合作表單
       </button>
       </div>
@@ -1425,12 +1443,22 @@ class="relative overflow-hidden">
       百家媒體聚焦，10萬海賊迷朝聖，五感體驗、巨型公
       <br>仔與 AR 互動創展覽新高度！</p>
 
-      <div class="flex justify-center pt-8">
+      <div class="hidden sm:flex justify-center pt-8">
       <button 
       type="button"
       class="rounded-2xl px-8 py-2 text-[14px] text-white font-GenJyuuGothicBold"
       style="background: linear-gradient(to right, #9A1184 0%, #E33733 35%, #F4BF20 70%);"
       @click="scrollToForm">
+        合作表單
+      </button>
+      </div>
+
+      <div class="flex sm:hidden justify-center pt-8">
+      <button 
+      type="button"
+      class="rounded-2xl px-8 py-2 text-[14px] text-white font-GenJyuuGothicBold"
+      style="background: linear-gradient(to right, #9A1184 0%, #E33733 35%, #F4BF20 70%);"
+      @click="mbscrollToForm">
         合作表單
       </button>
       </div>
@@ -1464,12 +1492,22 @@ class="relative overflow-hidden">
       串聯航海王冒險劇情與結合慢跑、 泡泡關卡及一百米
       <br>滑⽔⽔道，打造「全⺠皆能參與」的沉浸式活動!</p>
 
-      <div class="flex justify-center pt-8">
+      <div class="hidden sm:flex justify-center pt-8">
       <button 
       type="button"
       class="rounded-2xl px-8 py-2 text-[14px] text-white font-GenJyuuGothicBold"
       style="background: linear-gradient(to right, #9A1184 0%, #E33733 35%, #F4BF20 70%);"
       @click="scrollToForm">
+        合作表單
+      </button>
+      </div>
+
+      <div class="flex sm:hidden justify-center pt-8">
+      <button 
+      type="button"
+      class="rounded-2xl px-8 py-2 text-[14px] text-white font-GenJyuuGothicBold"
+      style="background: linear-gradient(to right, #9A1184 0%, #E33733 35%, #F4BF20 70%);"
+      @click="mbscrollToForm">
         合作表單
       </button>
       </div>
