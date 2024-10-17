@@ -2,20 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-/* @font-face {
-  font-family: 'Comfortaa-Light';
-  font-style: normal;
-  font-weight: 300;
-  font-display: swap;
-  src: url(/fonts/Comfortaa-Light.ttf) format("opentype");
-} */
-/* @font-face {
-  font-family: 'Comfortaa-Bold';
-  font-style: normal;
-  font-weight: 700;
-  font-display: swap;
-  src: url(/fonts/Comfortaa-Bold.ttf) format("opentype");
-} */
 @font-face {
   font-family: 'GenJyuuGothicRegular';
   font-style: normal;
@@ -98,7 +84,6 @@ body {
 .divideline{
     -webkit-animation: line 2s cubic-bezier(.19,1,.22,1) 0s infinite;
     animation: line 2s cubic-bezier(.19,1,.22,1) 0s infinite;
-/*    background: linear-gradient(0deg,#0B732F,#003A45);*/
     background: linear-gradient(0deg,#fff,#fff);
     transform: translateY(-50%);
     width: 1px;
@@ -120,148 +105,6 @@ body {
     100% {
         -webkit-clip-path: inset(100% 0 0 0);
         clip-path: inset(100% 0 0 0);
-    }
-}
-.top_animate {
-    background-color: #CAD227;
-    animation: ta 16s ease-out infinite;
-}
-@keyframes ta{
-    0%{
-        opacity: 0.8;
-        transform: translate(0,0);
-    }
-    10%{
-        opacity: 0.9;
-        animation-delay: 0.02s;
-        transform: translate(45px,0px);
-    }
-    20%{
-        opacity: 0.8;
-        animation-delay: 0.01s;
-        transform: translate(150px,70px);
-    }
-    30%{
-        opacity: 0.8;
-        animation-delay: 0.01s;
-        transform: translate(-300px,-50px);
-    }
-    40%{
-        opacity: 0.9;
-        animation-delay: 0.15s;
-        transform: translate(-125px,70px);
-    }
-    50%{
-        opacity: 0.9;
-        animation-delay: 0.025s;
-        transform: translate(-300px,-200px);
-    }
-    60%{
-        opacity: 0.8;
-        animation-delay: 0.03s;
-        transform: translate(70px,-400px);
-    }
-    70%{
-        opacity: 1;
-        animation-delay: 0.05s;
-        transform: translate(120px,-75px);
-    }
-    80%{
-        opacity: 0.8;
-        animation-delay: 0.025s;
-        transform: translate(50px,-75px);
-    }
-    90%{
-        opacity: 0.9;
-        animation-delay: 0.03s;
-        transform: translate(-75px,-75px);
-    }
-    100%{
-        opacity: 0.8;
-        transform: translate(0,0);
-    }
-}
-.right_animate {
-    background-color: #D91A77;
-    animation: ra 16s ease-out infinite;
-}
-@keyframes ra{
-    0%{
-        opacity: 0.6;
-        transform: translate(0,0);
-    }
-    25%{
-        opacity: 0.7;
-        animation-delay: 0.15s;
-        transform: translate(70px,50px);
-    }
-    30%{
-        opacity: 0.6;
-        animation-delay: 0.1s;
-        transform: translate(250px,-90px);
-    }
-    40%{
-        opacity: 0.9;
-        animation-delay: 0.05s;
-        transform: translate(400px,-160px);
-    }
-    55%{
-        opacity: 0.9;
-        animation-delay: 0.05s;
-        transform: translate(350px,-320px);
-    }
-    75%{
-        opacity: 0.8;
-        animation-delay: 0.025s;
-        transform: translate(100px,-200px);
-    }
-    85%{
-        opacity: 0.6;
-        animation-delay: 0.05s;
-        transform: translate(-60px,-150px);
-    }
-    100%{
-        opacity: 0.6;
-        transform: translate(0,0);
-    }
-}
-.left_animate {
-    background-color: #D91A77;
-    animation: la 16s ease-out infinite;
-}
-@keyframes la{
-    0%{
-        opacity: 0.6;
-        transform: translate(0,0);
-    }
-    25%{
-        opacity: 0.7;
-        animation-delay: 0.15s;
-        transform: translate(-70px,50px);
-    }
-    30%{
-        opacity: 0.6;
-        animation-delay: 0.1s;
-        transform: translate(-150px,90px);
-    }
-    55%{
-        opacity: 0.9;
-        animation-delay: 0.05s;
-        transform: translate(-300px,220px);
-    }
-    75%{
-        opacity: 0.8;
-        animation-delay: 0.025s;
-        transform: translate(-100px,200px);
-    }
-    85%{
-        opacity: 0.6;
-        animation-delay: 0.05s;
-        transform: translate(120px,150px);
-    }
-    100%{
-        opacity: 0.7;
-        transform: translate(0,0);
     }
 }
 @keyframes text-flicker-out-glow {
@@ -535,6 +378,7 @@ body {
     #E33733 30%,
     #F4BF20 95%
   );
+  background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   color: white;
@@ -547,6 +391,7 @@ body {
     #E33733 30%,
     #9A1184 95%
   );
+  background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   color: white;
@@ -559,6 +404,7 @@ body {
     #E33733 30%,
     #F4BF20 95%
   );
+  background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   color: white;

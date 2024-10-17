@@ -7,7 +7,7 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 gsap.registerPlugin(ScrollTrigger);
 
 export default{
-  name: "Home",
+  name: "Index",
   setup() {
     const triggers = ScrollTrigger.getAll();
     // 第一幕
@@ -2199,8 +2199,6 @@ class="relative overflow-hidden">
   </div>
   </div>
 
-
-  <!-- -->
   <!--  -->
   <div class="card-colors">
     <div class="c c-orange fixed left-8 bottom-8 z-10 w-[450px] h-[450px] blur-[180px]"></div>
@@ -2213,7 +2211,7 @@ class="relative overflow-hidden">
   class="w-full h-screen flex flex-col justify-center items-center">
     <img 
     ref="logo"
-    alt="高邦創意"
+    alt="高邦創意 GAOBANG"
     src="/logo.png" 
     class="logo z-40"
     loading="lazy">
@@ -2266,7 +2264,7 @@ class="relative overflow-hidden">
     ref="bg_index_1title"
     class="max-w-[640px] w-full z-[45]">
       <img 
-      src="/bg_25th-8.png" 
+      src="/bg_25th-8.webp" 
       alt="2024年全台規模最大的動漫盛會" 
       class="w-full pb-8 px-8 sm:px-0"
       loading="lazy">
@@ -2315,7 +2313,7 @@ class="relative overflow-hidden">
     ref="bg_index_2title"
     class="max-w-[640px] w-full z-[43]">
       <img 
-      src="/bg_20th-8.png" 
+      src="/bg_20th-8.webp" 
       alt="台灣首場規模最大的航海王特展" 
       class="w-full pb-8 px-8 sm:px-0"
       loading="lazy">
@@ -2364,7 +2362,7 @@ class="relative overflow-hidden">
     ref="bg_index_3title"
     class="max-w-[640px] w-full z-[42]">
       <img 
-      src="/bg_run-8.png" 
+      src="/bg_run-8.webp" 
       alt="台灣首場沉浸式航海王運動會" 
       class="w-full pb-8 px-8 sm:px-0"
       loading="lazy">
@@ -2419,7 +2417,11 @@ class="relative overflow-hidden">
       <p 
       class="text-white text-center leading-[18px] tracking-[1px] text-[10px] sm:text-[14px] pb-12 font-GenJyuuGothicRegular">
       Make dreams come true, make everything happen.</p>
-      <form @submit="submitForm" action="https://api.web3forms.com/submit" method="POST" id="form">
+      <form 
+      @submit="submitForm" 
+      action="https://api.web3forms.com/submit" 
+      method="POST" 
+      id="form">
         <input type="hidden" name="access_key" value="9220bf48-6e83-4f37-8cf9-ad5d0ab81f8f">
       <div class="flex flex-col md:flex-row">
       <div 
