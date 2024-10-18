@@ -2272,7 +2272,7 @@ class="relative overflow-hidden">
       class="text-custom-blue text-center tracking-[3.8px] text-[18px] sm:text-[28px] md:text-[40px] font-GenJyuuGothicBold">
       2024年全台規模最大的動漫盛會</h3>
       <hr 
-      class="h-[2px] border-0 my-4 mx-auto w-[128px]"
+      class="h-[1px] border-0 my-4 mx-auto w-[128px]"
       style="background: linear-gradient(to right, #9A1184 0%, #E33733 35%, #F4BF20 70%);">
       <h5 
       class="text-custom-blue text-center leading-[24px] tracking-[1px] text-[16px] pb-2 font-GenJyuuGothicBold">
@@ -2321,7 +2321,7 @@ class="relative overflow-hidden">
       class="text-custom-blue text-center tracking-[3.8px] text-[18px] sm:text-[28px] md:text-[40px] font-GenJyuuGothicBold">
       台灣首場規模最大的航海王特展</h3>
       <hr 
-      class="h-[2px] border-0 my-4 mx-auto w-[128px]"
+      class="h-[1px] border-0 my-4 mx-auto w-[128px]"
       style="background: linear-gradient(to right, #9A1184 0%, #E33733 35%, #F4BF20 70%);">
       <h5 
       class="text-custom-blue text-center leading-[24px] tracking-[1px] text-[16px] pb-2 font-GenJyuuGothicBold">
@@ -2370,7 +2370,7 @@ class="relative overflow-hidden">
       class="text-custom-blue text-center tracking-[3.8px] text-[18px] sm:text-[28px] md:text-[40px] font-GenJyuuGothicBold">
       台灣首場沉浸式航海王運動會</h3>
       <hr 
-      class="h-[2px] border-0 my-4 mx-auto w-[128px]"
+      class="h-[1px] border-0 my-4 mx-auto w-[128px]"
       style="background: linear-gradient(to right, #9A1184 0%, #E33733 35%, #F4BF20 70%);">
       <h5 
       class="text-custom-blue text-center leading-[24px] tracking-[1px] text-[16px] pb-2 font-GenJyuuGothicBold">
