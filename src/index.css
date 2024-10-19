@@ -419,7 +419,7 @@ body {
   filter: blur(200px);
 }
 
-@media screen and (-webkit-min-device-pixel-ratio: 0) { 
+@media screen and (max-width: 768px) { 
   select,
   textarea,
   input {
