@@ -10,18 +10,18 @@ export default{
   name: "Index",
   setup() {
     const triggers = ScrollTrigger.getAll();
-    // 第一幕
+    // 
     const bg_one = ref(null);
     const logo = ref(null);
     const logotxt= ref(null);
     const lineone =ref(null);
-    // 第二幕
+    // 
     const txtone = ref(null);
     const titleone = ref(null);
-    // 第三幕
+    // 
     const bg_two = ref(null);
     const titletwo = ref(null);
-    // 第三幕
+    // 
     const bg_end = ref(null);
     const titlethree = ref(null);
     //
@@ -34,13 +34,13 @@ export default{
     const bg_index_2 = ref(null);
     const bg_index_3 = ref(null);
     const bg_index_4 = ref(null);
-    // 邊角文字
+    // 
     const txt = ref(null);
     const topbgtxt = ref(null);
     const bgtxt = ref(null);
-    // ��
+    // 
     const topl = ref(null);
-    // 左邊
+    // 
     const lefta = ref(null);
     const lefto = ref(null);
     const leftb = ref(null);
@@ -58,16 +58,14 @@ export default{
     const leftii = ref(null);
     const lefttt = ref(null);
     const lefty = ref(null);
-    // 右下
+    // 
     const rightg = ref(null);
     const righta = ref(null);
     const righto = ref(null);
-
     const rightb = ref(null);
     const rightaa = ref(null);
     const rightn = ref(null);
     const rightgg = ref(null);
-
     const rightc = ref(null);
     const rightr = ref(null);
     const righte = ref(null);
@@ -79,7 +77,7 @@ export default{
     const righttt = ref(null);
     const righty = ref(null);
 
-    // 頁尾
+    // 
     const Bottomdata = reactive({
       info : 'Copyright © 2023 GAO BANG CREATIVITY All Rights Reserved',
       year: new Date().getFullYear(),
@@ -1131,7 +1129,6 @@ export default{
            },
            scale: 1,
           });
-          //
           //
           gsap.set(topbgtxt.value, {
             opacity: 0,

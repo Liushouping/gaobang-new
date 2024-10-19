@@ -418,3 +418,11 @@ body {
   -webkit-filter: blur(200px);
   filter: blur(200px);
 }
+
+@media screen and (-webkit-min-device-pixel-ratio: 0) { 
+  select,
+  textarea,
+  input {
+    font-size: 16px;
+  }
+}
