@@ -2311,7 +2311,7 @@ class="relative overflow-hidden">
     class="max-w-[640px] w-full z-[43]">
       <img 
       src="/bg_20th-8.webp" 
-      alt="台灣首場��模最大的航海王特展" 
+      alt="台灣首場規模最大的航海王特展" 
       class="w-full pb-8 px-8 sm:px-0"
       loading="lazy">
       <h3 
