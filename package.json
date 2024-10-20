@@ -9,7 +9,6 @@
   },
   "dependencies": {
     "@jridgewell/sourcemap-codec": "^1.4.15",
-    "@vueuse/head": "^0.7.6",
     "gsap": "^3.9.1",
     "underscore": "^1.13.6",
     "vue": "^3.2.25",
