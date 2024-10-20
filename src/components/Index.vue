@@ -2496,10 +2496,6 @@ class="relative overflow-hidden">
   <section 
   ref="bg_end"
   class="w-full h-screen flex justify-center items-center">
-    <h5 
-    ref="titlethree"
-    class="fixed flex justify-center items-center mt-[12rem] sm:mt-60 text-[1rem] sm:text-2xl md:text-[1.7rem] md:leading-10 text-white font-GenJyuuGothicBold tracking-[1px] sm:tracking-[1px] z-40" 
-    style="text-indent: 0em;">GAO BANG CREATIVITY</h5>
     <p 
     ref="titlethree"
     class="text-white text-center z-40 leading-[30px] tracking-[1px] pt-[400px] sm:pt-[500px]">
