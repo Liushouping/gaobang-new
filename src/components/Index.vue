@@ -2519,7 +2519,7 @@ class="relative overflow-hidden">
           type="submit"
           :disabled="isSubmitting || !isValid"
           class="rounded-2xl px-8 py-2 text-[14px] text-white font-GenJyuuGothicBold inline-flex justify-center items-center"
-          :class="{'opacity-50 cursor-not-allowed': !isValid}"
+          :class="{'opacity-100 cursor-not-allowed': !isValid}"
           style="background: linear-gradient(to right, #9A1184 0%, #E33733 35%, #F4BF20 70%);">
             {{ isSubmitting ? 'SUBMITTING...' : 'SUBMIT' }}
           </button>
