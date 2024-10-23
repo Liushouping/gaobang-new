@@ -2451,10 +2451,12 @@ class="relative overflow-hidden">
       class="w-full md:w-1/2 px-8 sm:px-20 md:pl-16 md:pr-2 xl:px-2">
 
       <label 
+      for="name"
       class="block uppercase tracking-[1px] text-white text-[14px] font-bold mb-2 w-full font-GenJyuuGothicBold">
         姓名
       </label>
       <input 
+      id="name"
       v-model="form.name"
       class="appearance-none block w-full bg-white text-gray-700 text-[14px] border-2 rounded-xl py-2 px-3 mb-3 font-GenJyuuGothicBold"  
       :class="{'border-green-500': validateField('name')}"
@@ -2462,10 +2464,12 @@ class="relative overflow-hidden">
       required>
 
       <label 
+      for="company"
       class="block uppercase tracking-[1px] text-white text-[14px] font-bold mb-2 w-full font-GenJyuuGothicBold">
         公司名稱
       </label>
       <input 
+      id="company"
       v-model="form.company"
       class="appearance-none block w-full bg-white text-gray-700 text-[14px] border-2 rounded-xl py-2 px-3 mb-3 font-GenJyuuGothicBold"  
       :class="{'border-green-500': validateField('company')}"
@@ -2473,10 +2477,12 @@ class="relative overflow-hidden">
       required>
 
       <label 
+      for="email"
       class="block uppercase tracking-[1px] text-white text-[14px] font-bold mb-2 w-full font-GenJyuuGothicBold">
         EMAIL
       </label>
       <input 
+      id="email"
       v-model="form.email"
       class="appearance-none block w-full bg-white text-gray-700 text-[14px] border-2 rounded-xl py-2 px-3 mb-3 font-GenJyuuGothicBold"  
       :class="{'border-green-500': validateField('email')}"
@@ -2484,10 +2490,12 @@ class="relative overflow-hidden">
       required>
 
       <label 
+      for="category"
       class="block uppercase tracking-[1px] text-white text-[14px] font-bold mb-2 w-full font-GenJyuuGothicBold">
         合作類別
       </label>
       <input 
+      id="category"
       v-model="form.category"
       class="appearance-none block w-full bg-white text-gray-700 text-[14px] border-2 rounded-xl py-2 px-3 mb-3 font-GenJyuuGothicBold"  
       :class="{'border-green-500': validateField('category')}"
@@ -2499,10 +2507,12 @@ class="relative overflow-hidden">
       class="w-full md:w-1/2 h-[280px] px-8 sm:px-20 md:pr-16 md:pl-2 xl:px-2">
 
         <label 
+        for="message"
         class="block uppercase tracking-[1px] text-white text-[14px] font-bold mb-2 w-full font-GenJyuuGothicBold">
         期望合作的內容概述
         </label>
         <textarea 
+        id="message"
         v-model="form.message"
         name="message" 
         rows="6" 
