@@ -76,7 +76,7 @@ export default{
     const rightii = ref(null);
     const righttt = ref(null);
     const righty = ref(null);
-
+    
     // 
     const Bottomdata = reactive({
       info : 'Copyright © 2023 GAO BANG CREATIVITY All Rights Reserved',
@@ -98,6 +98,22 @@ export default{
     // 
     const formResult = ref('');
     const isSubmitting = ref(false);
+
+    const form = reactive({
+      name: '',
+      company: '',
+      email: '',
+      category: '',
+      message: ''
+    });
+
+    const isValid = computed(() => {
+      return form.name && form.company && form.email && form.category && form.message;
+    });
+
+    const validateField = (field) => {
+      return form[field] !== '';
+    };
 
     // 
     const submitForm = async (event) => {
@@ -2109,7 +2125,10 @@ export default{
       mbscrollToForm,
       formResult,
       isSubmitting,
-      submitForm
+      submitForm,
+      form,
+      isValid,
+      validateField
     }
   },
 };
@@ -2311,7 +2330,7 @@ class="relative overflow-hidden">
     class="max-w-[640px] w-full z-[43]">
       <img 
       src="/bg_20th-8.webp" 
-      alt="台灣首場規模最大的航海王特展" 
+      alt="台灣首場規模最大的航海王��展" 
       class="w-full pb-8 px-8 sm:px-0"
       loading="lazy">
       <h3 
@@ -2429,7 +2448,9 @@ class="relative overflow-hidden">
         姓名
       </label>
       <input 
-      class="appearance-none block w-full bg-white text-gray-700 text-[14px] border rounded-xl py-2 px-3 mb-3 font-GenJyuuGothicBold"  
+      v-model="form.name"
+      :class="{'border-green-500 border-2': validateField('name')}"
+      class="appearance-none block w-full bg-white text-gray-700 text-[14px] border-2 rounded-xl py-2 px-3 mb-3 font-GenJyuuGothicBold"  
       type="text"
       required>
 
@@ -2438,7 +2459,9 @@ class="relative overflow-hidden">
         公司名稱
       </label>
       <input 
-      class="appearance-none block w-full bg-white text-gray-700 text-[14px] border rounded-xl py-2 px-3 mb-3 font-GenJyuuGothicBold"  
+      v-model="form.company"
+      :class="{'border-green-500 border-2': validateField('company')}"
+      class="appearance-none block w-full bg-white text-gray-700 text-[14px] border-2 rounded-xl py-2 px-3 mb-3 font-GenJyuuGothicBold"  
       type="text"
       required>
 
@@ -2447,7 +2470,9 @@ class="relative overflow-hidden">
         EMAIL
       </label>
       <input 
-      class="appearance-none block w-full bg-white text-gray-700 text-[14px] border rounded-xl py-2 px-3 mb-3 font-GenJyuuGothicBold"  
+      v-model="form.email"
+      :class="{'border-green-500 border-2': validateField('email')}"
+      class="appearance-none block w-full bg-white text-gray-700 text-[14px] border-2 rounded-xl py-2 px-3 mb-3 font-GenJyuuGothicBold"  
       type="email"
       required>
 
@@ -2456,7 +2481,9 @@ class="relative overflow-hidden">
         合作類別
       </label>
       <input 
-      class="appearance-none block w-full bg-white text-gray-700 text-[14px] border rounded-xl py-2 px-3 mb-3 font-GenJyuuGothicBold"  
+      v-model="form.category"
+      :class="{'border-green-500 border-2': validateField('category')}"
+      class="appearance-none block w-full bg-white text-gray-700 text-[14px] border-2 rounded-xl py-2 px-3 mb-3 font-GenJyuuGothicBold"  
       type="text"
       required>
 
@@ -2469,9 +2496,11 @@ class="relative overflow-hidden">
         期望合作的內容概述
         </label>
         <textarea 
+        v-model="form.message"
+        :class="{'border-green-500 border-2': validateField('message')}"
         name="message" 
         rows="6" 
-        class="block w-full h-full bg-white rounded-xl text-gray-700 text-[14px] border py-2 px-3 mb-3 font-GenJyuuGothicBold"
+        class="block w-full h-full bg-white rounded-xl text-gray-700 text-[14px] border-2 py-2 px-3 mb-3 font-GenJyuuGothicBold"
         required></textarea>
 
         <div 
@@ -2480,10 +2509,11 @@ class="relative overflow-hidden">
             {{ formResult }}</div>
           <button 
           type="submit"
-          :disabled="isSubmitting"
+          :disabled="isSubmitting || !isValid"
           class="rounded-2xl px-8 py-2 text-[14px] text-white font-GenJyuuGothicBold inline-flex justify-center items-center"
+          :class="{'opacity-50 cursor-not-allowed': !isValid}"
           style="background: linear-gradient(to right, #9A1184 0%, #E33733 35%, #F4BF20 70%);">
-            {{ isSubmitting ? 'SUBMIT' : 'SUBMIT' }}
+            {{ isSubmitting ? 'SUBMITTING...' : 'SUBMIT' }}
           </button>
         </div>
       </div>
