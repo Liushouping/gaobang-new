@@ -2457,8 +2457,8 @@ class="relative overflow-hidden">
       </label>
       <input 
       v-model="form.name"
-      :class="{'border-green-500 border-2': validateField('name')}"
       class="appearance-none block w-full bg-white text-gray-700 text-[14px] border-2 border-white rounded-xl py-2 px-3 mb-3 font-GenJyuuGothicBold"  
+      :class="{'border-green-500': validateField('name')}"
       type="text"
       required>
 
@@ -2468,8 +2468,8 @@ class="relative overflow-hidden">
       </label>
       <input 
       v-model="form.company"
-      :class="{'border-green-500 border-2': validateField('company')}"
       class="appearance-none block w-full bg-white text-gray-700 text-[14px] border-2 border-white rounded-xl py-2 px-3 mb-3 font-GenJyuuGothicBold"  
+      :class="{'border-green-500': validateField('company')}"
       type="text"
       required>
 
@@ -2479,8 +2479,8 @@ class="relative overflow-hidden">
       </label>
       <input 
       v-model="form.email"
-      :class="{'border-green-500 border-2': validateField('email')}"
       class="appearance-none block w-full bg-white text-gray-700 text-[14px] border-2 border-white rounded-xl py-2 px-3 mb-3 font-GenJyuuGothicBold"  
+      :class="{'border-green-500': validateField('email')}"
       type="email"
       required>
 
@@ -2490,8 +2490,8 @@ class="relative overflow-hidden">
       </label>
       <input 
       v-model="form.category"
-      :class="{'border-green-500 border-2': validateField('category')}"
       class="appearance-none block w-full bg-white text-gray-700 text-[14px] border-2 border-white rounded-xl py-2 px-3 mb-3 font-GenJyuuGothicBold"  
+      :class="{'border-green-500': validateField('category')}"
       type="text"
       required>
 
@@ -2505,10 +2505,10 @@ class="relative overflow-hidden">
         </label>
         <textarea 
         v-model="form.message"
-        :class="{'border-green-500 border-2': validateField('message')}"
         name="message" 
         rows="6" 
         class="block w-full h-full bg-white rounded-xl text-gray-700 text-[14px] border-2 border-white py-2 px-3 mb-3 font-GenJyuuGothicBold"
+        :class="{'border-green-500': validateField('message')}"
         required></textarea>
 
         <div 
