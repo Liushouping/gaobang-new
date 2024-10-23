@@ -308,8 +308,7 @@ body {
   transition: opacity 1000ms linear, transform 1000ms linear, filter 400ms linear, letter-spacing 1000ms linear;
 }
 
-
-.card-colors {
+.all-colors {
   position: fixed;
   top: 0;
   right: 0;
@@ -318,24 +317,24 @@ body {
   transform-origin: 160px 100px;
 }
 
-.c {
+.color {
   position: fixed;
   border-radius: 100%;
   animation: fade-scale 8s infinite;  
   opacity: 0;
 }
 
-.c-yellow {
+.color-yellow {
   background: #F4BF20;
   animation-delay: 0.25s;  
 }
 
-.c-pink {
+.color-pink {
   background: #9A1184;
   animation-delay: 0.5s;  
 }
 
-.c-orange {
+.color-orange {
   background: #E33733;
   animation-delay: 0.75s;    
 }

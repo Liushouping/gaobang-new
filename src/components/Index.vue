@@ -2082,20 +2082,19 @@ export default{
       bg_index_2,
       bg_index_3,
       bg_index_4,
-      // 邊角文字
+      // 
       txt,
       topbgtxt,
       bgtxt,
-      // 上面
+      // 
       topl,
-      // 左邊
+      // 
       lefta,
       lefto,
       leftb,
       leftaa,
       leftn,
       leftg,
-
       leftc,
       leftr,
       lefte,
@@ -2107,7 +2106,7 @@ export default{
       lefttt,
       lefty,
 
-      // 右下
+      // 
       rightg,
       righta,
       righto,
@@ -2127,7 +2126,7 @@ export default{
       rightii,
       righttt,
       righty,
-      // 頁尾
+      // 
       Bottomdata,
       scrollToForm,
       mbscrollToForm,
@@ -2224,10 +2223,10 @@ class="relative overflow-hidden">
   </div>
 
   <!--  -->
-  <div class="card-colors">
-    <div class="c c-orange fixed left-8 bottom-8 z-10 w-[450px] h-[450px] blur-[180px]"></div>
-    <div class="c c-yellow fixed right-8 bottom-8 z-10 w-[450px] h-[450px] blur-[70px]"></div>
-    <div class="c c-pink fixed left-[8px] lg:left-[450px] top-2 z-10 w-[450px] h-[450px] blur-[180px]"></div>
+  <div class="all-colors">
+    <div class="color color-orange fixed left-8 bottom-8 z-10 w-[450px] h-[450px] blur-[180px]"></div>
+    <div class="color color-yellow fixed right-8 bottom-8 z-10 w-[450px] h-[450px] blur-[70px]"></div>
+    <div class="color color-pink fixed left-[8px] lg:left-[450px] top-2 z-10 w-[450px] h-[450px] blur-[180px]"></div>
   </div>
   <!-- 1 -->
   <section 
@@ -2542,7 +2541,7 @@ class="relative overflow-hidden">
     </p>
   </section>
   <!--  -->
-  <footer 
+  <Footer 
   class="fixed bottom-5 w-full flex flex-col justify-center items-center">
     <div 
     class="flex flex-col justify-center items-center">
@@ -2550,6 +2549,6 @@ class="relative overflow-hidden">
       class="text-white text-[10px] font-GenJyuuGothicRegular" 
       href="mailto:pkbaby0707@gmail.com">{{ Bottomdata.updatedInfo }}</a>
     </div>
-  </footer>
+  </Footer>
 </div>
 </template>
