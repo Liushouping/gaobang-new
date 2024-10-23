@@ -111,7 +111,15 @@ export default{
       return form.name && form.company && form.email && form.category && form.message;
     });
 
+    const validateEmail = (email) => {
+      const re = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+      return re.test(String(email).toLowerCase());
+    };
+
     const validateField = (field) => {
+      if (field === 'email') {
+        return form[field] !== '' && validateEmail(form[field]);
+      }
       return form[field] !== '';
     };
 
@@ -2330,7 +2338,7 @@ class="relative overflow-hidden">
     class="max-w-[640px] w-full z-[43]">
       <img 
       src="/bg_20th-8.webp" 
-      alt="台灣首場規模最大的航海王��展" 
+      alt="台灣首場規模最大的航海王展" 
       class="w-full pb-8 px-8 sm:px-0"
       loading="lazy">
       <h3 
