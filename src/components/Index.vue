@@ -2457,7 +2457,7 @@ class="relative overflow-hidden">
       </label>
       <input 
       v-model="form.name"
-      class="appearance-none block w-full bg-white text-gray-700 text-[14px] border-2 border-white rounded-xl py-2 px-3 mb-3 font-GenJyuuGothicBold"  
+      class="appearance-none block w-full bg-white text-gray-700 text-[14px] border-2 rounded-xl py-2 px-3 mb-3 font-GenJyuuGothicBold"  
       :class="{'border-green-500': validateField('name')}"
       type="text"
       required>
@@ -2468,7 +2468,7 @@ class="relative overflow-hidden">
       </label>
       <input 
       v-model="form.company"
-      class="appearance-none block w-full bg-white text-gray-700 text-[14px] border-2 border-white rounded-xl py-2 px-3 mb-3 font-GenJyuuGothicBold"  
+      class="appearance-none block w-full bg-white text-gray-700 text-[14px] border-2 rounded-xl py-2 px-3 mb-3 font-GenJyuuGothicBold"  
       :class="{'border-green-500': validateField('company')}"
       type="text"
       required>
@@ -2479,7 +2479,7 @@ class="relative overflow-hidden">
       </label>
       <input 
       v-model="form.email"
-      class="appearance-none block w-full bg-white text-gray-700 text-[14px] border-2 border-white rounded-xl py-2 px-3 mb-3 font-GenJyuuGothicBold"  
+      class="appearance-none block w-full bg-white text-gray-700 text-[14px] border-2 rounded-xl py-2 px-3 mb-3 font-GenJyuuGothicBold"  
       :class="{'border-green-500': validateField('email')}"
       type="email"
       required>
@@ -2490,7 +2490,7 @@ class="relative overflow-hidden">
       </label>
       <input 
       v-model="form.category"
-      class="appearance-none block w-full bg-white text-gray-700 text-[14px] border-2 border-white rounded-xl py-2 px-3 mb-3 font-GenJyuuGothicBold"  
+      class="appearance-none block w-full bg-white text-gray-700 text-[14px] border-2 rounded-xl py-2 px-3 mb-3 font-GenJyuuGothicBold"  
       :class="{'border-green-500': validateField('category')}"
       type="text"
       required>
@@ -2507,7 +2507,7 @@ class="relative overflow-hidden">
         v-model="form.message"
         name="message" 
         rows="6" 
-        class="block w-full h-full bg-white rounded-xl text-gray-700 text-[14px] border-2 border-white py-2 px-3 mb-3 font-GenJyuuGothicBold"
+        class="block w-full h-full bg-white rounded-xl text-gray-700 text-[14px] border-2 py-2 px-3 mb-3 font-GenJyuuGothicBold"
         :class="{'border-green-500': validateField('message')}"
         required></textarea>
 
