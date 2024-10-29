@@ -166,7 +166,7 @@ export default{
     // pc
     const scrollToForm = () => {
       window.scrollTo({
-        top: 5850,
+        top: 6050,
         behavior: 'smooth'
       });
     };
