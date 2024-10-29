@@ -166,14 +166,14 @@ export default{
     // pc
     const scrollToForm = () => {
       window.scrollTo({
-        top: 4650,
+        top: 5850,
         behavior: 'smooth'
       });
     };
     // mobile
     const mbscrollToForm = () => {
       window.scrollTo({
-        top: 3700,
+        top: 4890,
         behavior: 'smooth'
       });
     };
@@ -1124,7 +1124,7 @@ export default{
           gsap.to(logo.value, {
            scrollTrigger: {
             start: "top -80",
-            end: "bottom 1500", 
+            end: "bottom 1000", 
             toggleClass: {
               className: 'logo-to', 
               targets: logo.value
@@ -1144,7 +1144,7 @@ export default{
           gsap.to(logotxt.value, {
            scrollTrigger: {
             start: "top -10",
-            end: "bottom 1500",
+            end: "bottom 1000",
             toggleClass: {
               className: 'logotxt-to', 
               targets: logotxt.value
@@ -1329,11 +1329,12 @@ export default{
            duration: 0.25,
           });
           // bg_index_1title
+
           gsap.set(bg_index_1title.value, {
             y: 40,
             filter: "blur(16px)",
             opacity: 0,
-            scale: 3,
+            scale: 1.5,
           });
 
           gsap.to(bg_index_1title.value, {
@@ -1342,8 +1343,8 @@ export default{
             start: "top +=300px",
             end: "+=300",
             scrub: true,
-            toggleClass: "active",
             markers: false,
+            pin: true
            },
            y: 0,
            scale: 1,
@@ -1356,7 +1357,7 @@ export default{
             y: 40,
             filter: "blur(16px)",
             opacity: 0,
-            scale: 3,
+            scale: 1.5,
           });
 
           gsap.to(bg_index_2title.value, {
@@ -1365,7 +1366,6 @@ export default{
             start: "top +=300px",
             end: "+=300",
             scrub: true,
-            toggleClass: "active",
             markers: false,
            },
            y: 0,
@@ -1379,7 +1379,7 @@ export default{
             y: 40,
             filter: "blur(16px)",
             opacity: 0,
-            scale: 3,
+            scale: 1.5,
           });
 
           gsap.to(bg_index_3title.value, {
@@ -1388,7 +1388,6 @@ export default{
             start: "top +=300px",
             end: "+=300",
             scrub: true,
-            toggleClass: "active",
             markers: false,
            },
            y: 0,
@@ -1402,7 +1401,7 @@ export default{
             y: 40,
             filter: "blur(16px)",
             opacity: 0,
-            scale: 3,
+            scale: 1.5,
           });
 
           gsap.to(bg_index_4title.value, {
@@ -1411,7 +1410,6 @@ export default{
             start: "top +=300px",
             end: "+=300",
             scrub: true,
-            toggleClass: "active",
             markers: false,
            },
            y: 0,
@@ -1420,6 +1418,7 @@ export default{
            filter: "blur(0px)",
            duration: 0.25,
           });
+
           // new left
           gsap.set(lefta.value, {
             opacity: 0.1,
@@ -2180,7 +2179,7 @@ class="relative overflow-hidden">
         <span ref="leftn" class="mt-[0.7rem] md:mt-[14px]">N</span>
         <span ref="leftg" class="mt-[0.7rem] md:mt-[14px]">G</span>
 
-        <span ref="leftc" class="mt-[0.7rem] md:mt-[14px]">C</span>
+        <!-- <span ref="leftc" class="mt-[0.7rem] md:mt-[14px]">C</span>
         <span ref="leftr" class="mt-[0.7rem] md:mt-[14px]">R</span>
         <span ref="lefte" class="mt-[0.7rem] md:mt-[14px]">E</span>
         <span ref="leftaaa" class="mt-[0.7rem] md:mt-[14px]">A</span>
@@ -2189,7 +2188,7 @@ class="relative overflow-hidden">
         <span ref="leftv" class="mt-[0.7rem] md:mt-[14px]">V</span>
         <span ref="leftii" class="mt-[0.7rem] md:mt-[14px]">I</span>
         <span ref="lefttt" class="mt-[0.7rem] md:mt-[14px]">T</span>
-        <span ref="lefty" class="mt-[0.7rem] md:mt-[14px]">Y</span>
+        <span ref="lefty" class="mt-[0.7rem] md:mt-[14px]">Y</span> -->
 
     </div>
 
@@ -2282,10 +2281,10 @@ class="relative overflow-hidden">
   <div ref="bg_index_1">
   <!-- 3 -->
   <section 
-  class="w-full h-screen flex flex-col justify-center items-center">
+  class="w-full h-[1200px]">
     <div 
     ref="bg_index_1title"
-    class="max-w-[640px] w-full z-[45]">
+    class="max-w-[370px] sm:max-w-[480px] 2xl:max-w-[640px] w-full z-[45] sticky top-20 mx-auto">
       <img 
       src="/bg_25th-8.webp" 
       alt="2024年全台規模最大的動漫盛會" 
@@ -2331,10 +2330,10 @@ class="relative overflow-hidden">
   <!-- 4 -->
   <section 
   ref="bg_index_2"
-  class="w-full h-screen flex flex-col justify-center items-center">
+  class="w-full h-[1200px]">
     <div 
     ref="bg_index_2title"
-    class="max-w-[640px] w-full z-[43]">
+    class="max-w-[370px] sm:max-w-[480px] 2xl:max-w-[640px] w-full z-[43] sticky top-20 mx-auto">
       <img 
       src="/bg_20th-8.webp" 
       alt="台灣首場規模最大的航海王展" 
@@ -2380,10 +2379,10 @@ class="relative overflow-hidden">
   <!-- 5 -->
   <section 
   ref="bg_index_3"
-  class="w-full h-screen flex flex-col justify-center items-center">
+  class="w-full h-[1200px]">
     <div 
     ref="bg_index_3title"
-    class="max-w-[640px] w-full z-[42]">
+    class="max-w-[370px] sm:max-w-[480px] 2xl:max-w-[640px] w-full z-[42] mx-auto">
       <img 
       src="/bg_run-8.webp" 
       alt="台灣首場沉浸式航海王運動會" 
