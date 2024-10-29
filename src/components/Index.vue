@@ -406,8 +406,8 @@ export default{
           gsap.to(bg_index_1title.value, {
            scrollTrigger: {
             trigger: bg_index_1.value,
-            start: "top +=300px",
-            end: "+=300",
+            start: "top +=900px",
+            end: "+=600",
             scrub: true,
             toggleClass: "active",
             markers: false,
@@ -429,8 +429,8 @@ export default{
           gsap.to(bg_index_2title.value, {
            scrollTrigger: {
             trigger: bg_index_2.value,
-            start: "top +=300px",
-            end: "+=300",
+            start: "top +=900px",
+            end: "+=600",
             scrub: true,
             toggleClass: "active",
             markers: false,
@@ -452,8 +452,8 @@ export default{
           gsap.to(bg_index_3title.value, {
            scrollTrigger: {
             trigger: bg_index_3.value,
-            start: "top +=300px",
-            end: "+=300",
+            start: "top +=900px",
+            end: "+=600",
             scrub: true,
             toggleClass: "active",
             markers: false,
@@ -1341,7 +1341,7 @@ export default{
            scrollTrigger: {
             trigger: bg_index_1.value,
             start: "top +=300px",
-            end: "+=300",
+            end: "+=600",
             scrub: true,
             markers: false,
             pin: true
@@ -1364,7 +1364,7 @@ export default{
            scrollTrigger: {
             trigger: bg_index_2.value,
             start: "top +=300px",
-            end: "+=300",
+            end: "+=600",
             scrub: true,
             markers: false,
            },
@@ -1386,7 +1386,7 @@ export default{
            scrollTrigger: {
             trigger: bg_index_3.value,
             start: "top +=300px",
-            end: "+=300",
+            end: "+=600",
             scrub: true,
             markers: false,
            },
