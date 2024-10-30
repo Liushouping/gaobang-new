@@ -166,14 +166,14 @@ export default{
     // pc
     const scrollToForm = () => {
       window.scrollTo({
-        top: 6050,
+        top: 5500,
         behavior: 'smooth'
       });
     };
     // mobile
     const mbscrollToForm = () => {
       window.scrollTo({
-        top: 5400,
+        top: 4800,
         behavior: 'smooth'
       });
     };
@@ -475,7 +475,7 @@ export default{
           gsap.to(bg_index_4title.value, {
            scrollTrigger: {
             trigger: bg_index_4.value,
-            start: "top +=300px",
+            start: "top +=600px",
             end: "+=300",
             scrub: true,
             toggleClass: "active",
