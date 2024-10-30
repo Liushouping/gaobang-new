@@ -1340,11 +1340,11 @@ export default{
           gsap.to(bg_index_1title.value, {
            scrollTrigger: {
             trigger: bg_index_1.value,
-            start: "top +=300px",
+            start: "top +=900px",
             end: "+=600",
             scrub: true,
             markers: false,
-            pin: true
+            // pin: true
            },
            y: 0,
            scale: 1,
@@ -1363,10 +1363,10 @@ export default{
           gsap.to(bg_index_2title.value, {
            scrollTrigger: {
             trigger: bg_index_2.value,
-            start: "top +=300px",
+            start: "top +=900px",
             end: "+=600",
             scrub: true,
-            markers: false,
+            markers: false
            },
            y: 0,
            scale: 1,
@@ -1385,7 +1385,7 @@ export default{
           gsap.to(bg_index_3title.value, {
            scrollTrigger: {
             trigger: bg_index_3.value,
-            start: "top +=300px",
+            start: "top +=900px",
             end: "+=600",
             scrub: true,
             markers: false,
@@ -2156,7 +2156,7 @@ class="relative overflow-hidden">
         <span ref="topl">A</span>
         <span ref="topl">N</span>
         <span ref="topl">G</span>
-        <span ref="topl">R</span>
+        <!-- <span ref="topl">R</span>
         <span ref="topl">E</span>
         <span ref="topl">A</span>
         <span ref="topl">T</span>
@@ -2164,7 +2164,7 @@ class="relative overflow-hidden">
         <span ref="topl">V</span>
         <span ref="topl">I</span>
         <span ref="topl">T</span>
-        <span ref="topl">Y</span>
+        <span ref="topl">Y</span> -->
     </div>
   </div>
   <div 
@@ -2445,6 +2445,7 @@ class="relative overflow-hidden">
       method="POST" 
       id="form">
         <input type="hidden" name="access_key" value="9220bf48-6e83-4f37-8cf9-ad5d0ab81f8f">
+        <input type="hidden" name="subject" value="Gaobang 高邦創意 官方網站 - 合作申請">
       <div class="flex flex-col md:flex-row">
       <div 
       class="w-full md:w-1/2 px-8 sm:px-20 md:pl-16 md:pr-2 xl:px-2">
@@ -2456,6 +2457,7 @@ class="relative overflow-hidden">
       </label>
       <input 
       id="name"
+      name="姓名"
       v-model="form.name"
       class="appearance-none block w-full bg-white text-gray-700 text-[14px] border-2 rounded-xl py-2 px-3 mb-3 font-GenJyuuGothicBold"  
       :class="{'border-green-500': validateField('name')}"
@@ -2469,6 +2471,7 @@ class="relative overflow-hidden">
       </label>
       <input 
       id="company"
+      name="公司名稱"
       v-model="form.company"
       class="appearance-none block w-full bg-white text-gray-700 text-[14px] border-2 rounded-xl py-2 px-3 mb-3 font-GenJyuuGothicBold"  
       :class="{'border-green-500': validateField('company')}"
@@ -2477,6 +2480,7 @@ class="relative overflow-hidden">
 
       <label 
       for="email"
+      name="信箱帳號"
       class="block uppercase tracking-[1px] text-white text-[14px] font-bold mb-2 w-full font-GenJyuuGothicBold">
         EMAIL
       </label>
@@ -2495,6 +2499,7 @@ class="relative overflow-hidden">
       </label>
       <input 
       id="category"
+      name="合作類別"
       v-model="form.category"
       class="appearance-none block w-full bg-white text-gray-700 text-[14px] border-2 rounded-xl py-2 px-3 mb-3 font-GenJyuuGothicBold"  
       :class="{'border-green-500': validateField('category')}"
@@ -2513,7 +2518,7 @@ class="relative overflow-hidden">
         <textarea 
         id="message"
         v-model="form.message"
-        name="message" 
+        name="期望合作的內容概述" 
         rows="6" 
         class="block w-full h-full bg-white rounded-xl text-gray-700 text-[14px] border-2 py-2 px-3 mb-3 font-GenJyuuGothicBold"
         :class="{'border-green-500': validateField('message')}"
