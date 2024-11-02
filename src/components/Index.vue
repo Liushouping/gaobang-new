@@ -3,7 +3,7 @@ import { ref, reactive, onBeforeMount, computed, onMounted, onUnmounted } from "
 import _ from 'underscore';
 import gsap from 'gsap';
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-import Footer from './footer.vue';
+import Footer from './Footer.vue';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -1761,7 +1761,6 @@ export default{
       righttt,
       righty,
       // 
-      // Bottomdata,
       scrollToForm,
       mbscrollToForm,
       formResult,
@@ -1782,6 +1781,7 @@ class="relative overflow-hidden">
   ref="txt"
   class="text-white">
   <div ref="topbgtxt">
+    <!-- GAOBANG postion top -->
     <div 
     class="text_body fixed top-[1rem] left-[1rem] sm:left-[2rem] flex flex-row text-[10px] sm:text-[18px] z-40 tracking-[16px] sm:tracking-[36px] md:tracking-[28px] font-GenJyuuGothicBold">
         <span>G</span>
@@ -1795,6 +1795,7 @@ class="relative overflow-hidden">
   </div>
   <div 
   ref="bgtxt">
+    <!-- GAOBANG postion left -->
     <div 
     class="text_body_bl fixed top-[2.9rem] sm:top-[3.6rem] left-[1rem] sm:left-[2rem] flex flex-col text-[10px] sm:text-[18px] z-40 font-GenJyuuGothicBold justify-center items-center">
         <span ref="lefta">A</span>
@@ -1805,7 +1806,7 @@ class="relative overflow-hidden">
         <span ref="leftn" class="mt-[0.7rem] md:mt-[14px]">N</span>
         <span ref="leftg" class="mt-[0.7rem] md:mt-[14px]">G</span>
     </div>
-
+    <!-- GAOBANG postion right bottom -->
     <div 
     class="fixed bottom-[3.5rem] sm:bottom-[1rem] right-[0rem] flex flex-col text-[10px] sm:text-[18px] tracking-[18px] sm:tracking-[24px] z-40 font-GenJyuuGothicBold">
         <div class="flex flex-row justify-end text_body_br">
