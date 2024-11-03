@@ -145,12 +145,12 @@ export default{
           form[key] = '';
         });
         
-        // formResult.value = "提交成功，我們會盡快與您聯繫！";
-        // 或使用 toast
+        // 
         toast("提交成功，我們會盡快與您聯繫！", {
           "theme": "auto",
           "type": "success",
-          "autoClose": 1000,
+          "autoClose": 3000,
+          "toastClassName" : "font-GenJyuuGothicBold text-[14px] text-gray-700 tracking-[1px]",
           "dangerouslyHTMLString": true
         });
       } else {
@@ -162,7 +162,8 @@ export default{
       toast("提交失敗，請重試。", {
           "theme": "auto",
           "type": "error",
-          "autoClose": 1000,
+          "autoClose": 3000,
+          "toastClassName" : "font-GenJyuuGothicBold text-[14px] text-gray-700 tracking-[1px]",
           "dangerouslyHTMLString": true
       });
       // formResult.value = "提交失敗，請重試。";
