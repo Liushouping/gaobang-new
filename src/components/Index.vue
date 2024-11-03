@@ -5,15 +5,15 @@ import { toast } from 'vue3-toastify';
 import 'vue3-toastify/dist/index.css';
 import gsap from 'gsap';
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-import Footer from './Footer.vue';
+// import Footer from './Footer.vue';
 
 gsap.registerPlugin(ScrollTrigger);
 
 export default{
   name: "Index",
-  components: {
-    Footer 
-  },
+  // components: {
+  //   Footer 
+  // },
   setup() {
     const triggers = ScrollTrigger.getAll();
     // 
@@ -189,6 +189,9 @@ export default{
         behavior: 'smooth'
       });
     };
+
+    // footer
+    const currentYear = computed(() => new Date().getFullYear());
 
     function gsapSet() {
       ScrollTrigger.matchMedia({
@@ -1793,7 +1796,9 @@ export default{
       submitForm,
       form,
       isValid,
-      validateField
+      validateField,
+      //
+      currentYear
     }
   },
 };
@@ -2194,6 +2199,14 @@ class="relative overflow-hidden">
     </p>
   </section>
   <!--  -->
-  <Footer></Footer>
+  <footer 
+  class="fixed bottom-5 w-full flex flex-col justify-center items-center">
+    <div 
+    class="flex flex-col justify-center items-center">
+      <a 
+      class="text-white text-[10px] font-GenJyuuGothicRegular" 
+      href="mailto:pkbaby0707@gmail.com">Copyright © {{ currentYear }} GAO BANG CREATIVITY All Rights Reserved</a>
+    </div>
+  </footer>
 </div>
 </template>
