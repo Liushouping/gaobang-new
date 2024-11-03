@@ -1,6 +1,8 @@
 <script>
 import { ref, reactive, onBeforeMount, computed, onMounted, onUnmounted } from "vue";
 import _ from 'underscore';
+import { toast } from 'vue3-toastify';
+import 'vue3-toastify/dist/index.css';
 import gsap from 'gsap';
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import Footer from './Footer.vue';
@@ -43,7 +45,7 @@ export default{
     const topbgtxt = ref(null);
     const bgtxt = ref(null);
     // 
-    const topl = ref(null);
+    // const topl = ref(null);
     // 
     const lefta = ref(null);
     const lefto = ref(null);
@@ -83,7 +85,6 @@ export default{
     };
 
     // 
-    const formResult = ref('');
     const isSubmitting = ref(false);
 
     const form = reactive({
@@ -112,43 +113,66 @@ export default{
 
     // 
     const submitForm = async (event) => {
-      event.preventDefault();
-      isSubmitting.value = true;
-      formResult.value = "請稍等...";
+    event.preventDefault();
+    isSubmitting.value = true;
+    // formResult.value = "請稍等...";
 
-      const form = event.target;
-      const formData = new FormData(form);
-      const object = Object.fromEntries(formData);
-      const json = JSON.stringify(object);
-
-      try {
-        const response = await fetch('https://api.web3forms.com/submit', {
-          method: 'POST',
-          headers: {
-            'Content-Type': 'application/json',
-            'Accept': 'application/json'
-          },
-          body: json
-        });
-
-        const result = await response.json();
-        if (response.status === 200) {
-          formResult.value = "表單已成功送出！";
-        } else {
-          console.log(response);
-          formResult.value = result.message;
-        }
-      } catch (error) {
-        console.log(error);
-        formResult.value = "出現錯誤!";
-      } finally {
-        isSubmitting.value = false;
-        form.reset();
-        setTimeout(() => {
-          formResult.value = "";
-        }, 3000);
-      }
+    // 創建要提交的數據對象
+    const submitData = {
+      access_key: '9220bf48-6e83-4f37-8cf9-ad5d0ab81f8f',
+      subject: 'Gaobang 高邦創意 官方網站 - 合作申請',
+      姓名: form.name,
+      公司名稱: form.company,
+      信箱帳號: form.email,
+      合作類別: form.category,
+      期望合作的內容概述: form.message
     };
+
+    try {
+      const response = await fetch('https://api.web3forms.com/submit', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          'Accept': 'application/json'
+        },
+        body: JSON.stringify(submitData)
+      });
+
+      const result = await response.json();
+      if (response.status === 200) {
+        // 清空表單
+        Object.keys(form).forEach(key => {
+          form[key] = '';
+        });
+        
+        // formResult.value = "提交成功，我們會盡快與您聯繫！";
+        // 或使用 toast
+        toast("提交成功，我們會盡快與您聯繫！", {
+          "theme": "auto",
+          "type": "success",
+          "autoClose": 1000,
+          "dangerouslyHTMLString": true
+        });
+      } else {
+        console.log(response);
+        formResult.value = result.message;
+      }
+    } catch (error) {
+      console.log(error);
+      toast("提交失敗，請重試。", {
+          "theme": "auto",
+          "type": "error",
+          "autoClose": 1000,
+          "dangerouslyHTMLString": true
+      });
+      // formResult.value = "提交失敗，請重試。";
+    } finally {
+      isSubmitting.value = false;
+      // setTimeout(() => {
+      //   formResult.value = "";
+      // }, 3000);
+    }
+  };
 
     // pc
     const scrollToForm = () => {
@@ -1763,7 +1787,7 @@ export default{
       // 
       scrollToForm,
       mbscrollToForm,
-      formResult,
+      // formResult,
       isSubmitting,
       submitForm,
       form,
@@ -1785,12 +1809,12 @@ class="relative overflow-hidden">
     <div 
     class="text_body fixed top-[1rem] left-[1rem] sm:left-[2rem] flex flex-row text-[10px] sm:text-[18px] z-40 tracking-[16px] sm:tracking-[36px] md:tracking-[28px] font-GenJyuuGothicBold">
         <span>G</span>
-        <span ref="topl">A</span>
-        <span ref="topl">O</span>
-        <span ref="topl">B</span>
-        <span ref="topl">A</span>
-        <span ref="topl">N</span>
-        <span ref="topl">G</span>
+        <span>A</span>
+        <span>O</span>
+        <span>B</span>
+        <span>A</span>
+        <span>N</span>
+        <span>G</span>
     </div>
   </div>
   <div 
@@ -2056,8 +2080,6 @@ class="relative overflow-hidden">
       Make dreams come true, make everything happen.</p>
       <form 
       @submit="submitForm" 
-      action="https://api.web3forms.com/submit" 
-      method="POST" 
       id="form">
         <input type="hidden" name="access_key" value="9220bf48-6e83-4f37-8cf9-ad5d0ab81f8f">
         <input type="hidden" name="subject" value="Gaobang 高邦創意 官方網站 - 合作申請">
@@ -2140,16 +2162,17 @@ class="relative overflow-hidden">
         required></textarea>
 
         <div 
-        class="flex justify-between items-center w-full">
-          <div class="flex flex-row w-full text-white text-[14px] tracking-[1px] font-GenJyuuGothicBold">
-            {{ formResult }}</div>
+        class="flex justify-end items-center w-full">
+          <!-- <div class="flex flex-row w-full text-white text-[14px] tracking-[1px] font-GenJyuuGothicBold">
+            {{ formResult }}
+          </div> -->
           <button 
           type="submit"
           :disabled="isSubmitting || !isValid"
           class="rounded-2xl px-8 py-2 text-[14px] text-white font-GenJyuuGothicBold inline-flex justify-center items-center"
           :class="{'opacity-100 cursor-not-allowed': !isValid}"
           style="background: linear-gradient(to right, #9A1184 0%, #E33733 35%, #F4BF20 70%);">
-            {{ isSubmitting ? 'SUBMITTING...' : 'SUBMIT' }}
+            {{ isSubmitting ? 'SUBMIT' : 'SUBMIT' }}
           </button>
         </div>
       </div>
