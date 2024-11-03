@@ -5,7 +5,7 @@ import { toast } from 'vue3-toastify';
 import 'vue3-toastify/dist/index.css';
 import gsap from 'gsap';
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-import Footer from './Footer.vue';
+import Footer from './footer.vue';
 
 gsap.registerPlugin(ScrollTrigger);
 
