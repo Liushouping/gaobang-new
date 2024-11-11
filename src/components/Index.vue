@@ -11,9 +11,9 @@ gsap.registerPlugin(ScrollTrigger);
 
 export default{
   name: "Index",
-  // components: {
-  //   Footer 
-  // },
+  components: {
+    // Footer 
+  },
   setup() {
     const triggers = ScrollTrigger.getAll();
     // 
@@ -1716,6 +1716,10 @@ export default{
     onMounted(() => {
       ScrollTrigger.refresh();
       gsapSet();
+      //
+      // [...document.querySelectorAll('*')].forEach((a) => {
+      //   a.style.outline = '0.25px solid #' + (~~(Math.random() * (1 << 24))).toString(16);
+      // });
     });
     onUnmounted(() => {
       triggers.forEach((trigger) => {
@@ -1907,7 +1911,7 @@ class="relative overflow-hidden">
   <!-- 2 -->
   <section 
   ref="bg_two"
-  class="w-full h-screen flex flex-col justify-center items-center">
+  class="w-full h-screen flex justify-center items-center">
     <p 
     ref="titletwo"
     class="text-white text-center z-40 leading-[30px] tracking-[1px] font-GenJyuuGothicBold">
@@ -1919,10 +1923,10 @@ class="relative overflow-hidden">
   <div ref="bg_index_1">
   <!-- 3 -->
   <section 
-  class="w-full h-[1200px]">
+  class="w-full h-[1200px] flex justify-center items-center">
     <div 
     ref="bg_index_1title"
-    class="max-w-[370px] sm:max-w-[480px] 2xl:max-w-[640px] w-full z-[45] sticky top-20 mx-auto">
+    class="max-w-[370px] sm:max-w-[480px] 2xl:max-w-[640px] w-full z-[45]">
       <img 
       src="/bg_25th-8.webp" 
       alt="2024年全台規模最大的動漫盛會" 
@@ -1968,10 +1972,10 @@ class="relative overflow-hidden">
   <!-- 4 -->
   <section 
   ref="bg_index_2"
-  class="w-full h-[1200px]">
+  class="w-full h-[1200px] flex flex-col justify-center items-center">
     <div 
     ref="bg_index_2title"
-    class="max-w-[370px] sm:max-w-[480px] 2xl:max-w-[640px] w-full z-[43] sticky top-20 mx-auto">
+    class="max-w-[370px] sm:max-w-[480px] 2xl:max-w-[640px] w-full z-[43]">
       <img 
       src="/bg_20th-8.webp" 
       alt="台灣首場規模最大的航海王展" 
@@ -2017,10 +2021,10 @@ class="relative overflow-hidden">
   <!-- 5 -->
   <section 
   ref="bg_index_3"
-  class="w-full h-[1200px]">
+  class="w-full h-[1200px] flex flex-col justify-center items-center">
     <div 
     ref="bg_index_3title"
-    class="max-w-[370px] sm:max-w-[480px] 2xl:max-w-[640px] w-full z-[42] mx-auto">
+    class="max-w-[370px] sm:max-w-[480px] 2xl:max-w-[640px] w-full z-[42]">
       <img 
       src="/bg_run-8.webp" 
       alt="台灣首場沉浸式航海王運動會" 
@@ -2198,5 +2202,6 @@ class="relative overflow-hidden">
       href="mailto:pkbaby0707@gmail.com">Copyright © {{ currentYear }} GAO BANG CREATIVITY All Rights Reserved</a>
     </div>
   </footer>
+
 </div>
 </template>
